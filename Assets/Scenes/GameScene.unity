@@ -1692,7 +1692,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 440.5, y: 165}
+  m_AnchoredPosition: {x: 440.5, y: 164.99998}
   m_SizeDelta: {x: 881, y: 403}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &517389268
@@ -2531,6 +2531,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 721865163}
+  - component: {fileID: 721865164}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -2552,6 +2553,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &721865164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721865162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7b11ae736e4edf46870dbc895c347a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &731499792
 GameObject:
   m_ObjectHideFlags: 0
@@ -2859,7 +2872,7 @@ RectTransform:
   - {fileID: 323303291}
   - {fileID: 363445054}
   m_Father: {fileID: 2069087031}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -4816,7 +4829,7 @@ RectTransform:
   m_Children:
   - {fileID: 1759349908}
   m_Father: {fileID: 2069087031}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4863,12 +4876,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
+      - m_Target: {fileID: 2069087032}
+        m_MethodName: startGameClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -6223,6 +6236,7 @@ GameObject:
   - component: {fileID: 2069087030}
   - component: {fileID: 2069087029}
   - component: {fileID: 2069087028}
+  - component: {fileID: 2069087032}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -6305,8 +6319,8 @@ RectTransform:
   - {fileID: 811617567}
   - {fileID: 887852594}
   - {fileID: 647369920}
-  - {fileID: 1532492290}
   - {fileID: 810281267}
+  - {fileID: 1532492290}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6315,6 +6329,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &2069087032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069087027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b693a45b61d2b44f97de35f91c7f0ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectionPanels:
+  - {fileID: 1360762987}
+  - {fileID: 1994248378}
+  - {fileID: 717667686}
+  - {fileID: 1123728376}
+  selectionPanel3Parent: {fileID: 402471481}
+  selectionPanel4Parent: {fileID: 363445053}
 --- !u!1 &2119584811
 GameObject:
   m_ObjectHideFlags: 0
