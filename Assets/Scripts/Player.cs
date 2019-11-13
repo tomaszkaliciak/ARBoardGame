@@ -7,11 +7,20 @@ public class Player : MonoBehaviour
 {
     private int balance = 2000;
     private string playerName;
-    private static int numberOfPlayers = 0;
+    private static int playerID = 0;
+    private BoardField currentPlace;
 
-    public Player(string name)
+    [SerializeField] private Material[] colorsOfPieces;
+
+    public void initialize()
     {
-        playerName = name;
-        ++numberOfPlayers;
+        Debug.LogError("initialize: " + playerName + playerID);
+
+        transform.GetComponent<MeshRenderer>().sharedMaterial = colorsOfPieces[playerID];
+        currentPlace = StartField.instance;
+        playerID++;
     }
+
+    public void setName(string name) { playerName = name; }
+
 }
