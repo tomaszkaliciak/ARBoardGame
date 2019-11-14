@@ -23,6 +23,7 @@ public class GameController : MonoBehaviour
         Debug.LogError("register: " + playerName);
 
         Vector3 placementOffset = Vector3.zero;
+
         switch (players.Count)
         {
             case 1:
@@ -55,5 +56,21 @@ public class GameController : MonoBehaviour
     public void startGame()
     {
         Debug.LogError("startGame");
+        StartCoroutine(playGame());
+    }
+
+    private IEnumerator playGame()
+    {
+        while (true)
+        {
+            foreach (var player in players)
+            {
+                yield return DiceManager.instance.rollDie();
+                int[] dieRollResults = DiceManager.instance.getDieRollResults();
+                Debug.Log("Got " + dieRollResults.Sum());
+
+                yield return player.takeSteps(dieRollResults.Sum());
+            }
+        }
     }
 }

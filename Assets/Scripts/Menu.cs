@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {   
-    [SerializeField] private InputField[] selectionPanels = new InputField[4];
-    [SerializeField] private GameObject selectionPanel3Parent, selectionPanel4Parent;
+    [SerializeField] private InputField[] playerPanels = new InputField[4];
+    [SerializeField] private GameObject thirdPlayerCreator, fourthPlayerCreator;
 
     private string getPlayerName(int num, InputField nameField)
     {
@@ -21,12 +21,12 @@ public class Menu : MonoBehaviour
     {
         for (int i = 0; i < 4; i++)
         {
-            if ((i == 2 && !selectionPanel3Parent.activeSelf) || (i == 3 && !selectionPanel4Parent.activeSelf))
+            if ((i == 2 && !thirdPlayerCreator.activeSelf) || (i == 3 && !fourthPlayerCreator.activeSelf))
             {
                 continue;
             }
             
-            GameController.instance.registerNewPlayer(getPlayerName(i, selectionPanels[i]));
+            GameController.instance.registerNewPlayer(getPlayerName(i, playerPanels[i]));
         }
 
         GameController.instance.startGame();

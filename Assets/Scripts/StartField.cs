@@ -6,8 +6,5 @@ public class StartField : BoardField
 {
     public static StartField instance;
 
-    protected override void init()
-    {
-        instance = this;
-    }
+    protected override void init() { instance = this; }
 }

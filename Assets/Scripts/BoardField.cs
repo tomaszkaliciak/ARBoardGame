@@ -9,11 +9,12 @@ public abstract class BoardField : MonoBehaviour
 
     private void Awake()
     {
-        int currentSpace = Int32.Parse(gameObject.name);
-
-        nextField = currentSpace < 39 ?
-            gameObject.transform.parent.Find((currentSpace + 1).ToString()).GetComponent<BoardField>() :
-            gameObject.transform.parent.Find("0").GetComponent<BoardField>();
+        const int numberOfFields = 40;
+        int siblingIndex = transform.GetSiblingIndex();
+        
+        nextField = siblingIndex < numberOfFields ?
+            gameObject.transform.parent.GetChild(siblingIndex + 1).gameObject.GetComponent<BoardField>() :
+            gameObject.transform.parent.GetChild(1).gameObject.GetComponent<BoardField>();
 
         init();
     }
