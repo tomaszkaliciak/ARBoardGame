@@ -65,6 +65,7 @@ public class GameController : MonoBehaviour
         {
             foreach (var player in players)
             {
+                PlayerInfo.instance.setPlayer(player.getName(), player.getBalance());
                 yield return DiceManager.instance.rollDie();
                 int[] dieRollResults = DiceManager.instance.getDieRollResults();
                 Debug.Log("Got " + dieRollResults.Sum());

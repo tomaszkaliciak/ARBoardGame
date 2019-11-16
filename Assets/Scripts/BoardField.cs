@@ -19,4 +19,7 @@ public abstract class BoardField : MonoBehaviour
         init();
     }
     protected virtual void init() { }
+
+    public abstract void passThrough(Player player);
+
 }

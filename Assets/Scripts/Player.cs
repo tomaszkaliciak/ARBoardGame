@@ -23,8 +23,13 @@ public class Player : MonoBehaviour
     }
 
     public void setName(string name) { playerName = name; }
-
-
+    public string getName() { return playerName; }
+    public int getBalance() { return balance; }
+    public void updateBalanceBy(int amountOfmoney)
+    {
+        balance += amountOfmoney;
+        PlayerInfo.instance.updateBalance(balance);
+    }
     public IEnumerator rotate(float degrees)
     {
         float progress = 0;
@@ -56,7 +61,7 @@ public class Player : MonoBehaviour
         
         while (progress <= .98f)
         {
-            progress = Time.time - startTime;
+            progress = 5 * (Time.time - startTime);
 
             Vector3 newPosition = startPosition + displacement * progress;
             newPosition.y = -1 * Mathf.Pow(progress - 0.5f, 2) + 0.25f;
@@ -79,7 +84,8 @@ public class Player : MonoBehaviour
         for (int i = 0; i < spaces; i++)
         {
             yield return goToField(currentPlace.nextField);
-            
+            currentPlace.passThrough(this);
+
             if (currentPlace is StartField || currentPlace is DummyFieldCorner)
             {
                 yield return rotate(movingForward ? 90 : -90);
