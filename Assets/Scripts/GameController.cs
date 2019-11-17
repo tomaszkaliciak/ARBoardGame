@@ -27,15 +27,15 @@ public class GameController : MonoBehaviour
         switch (players.Count)
         {
             case 1:
-                placementOffset = new Vector3(.3f, 0, 0);
+                placementOffset = new Vector3(.7f, 0, 0);
                 break;
 
             case 2:
-                placementOffset = new Vector3(-.3f, 0, 0);
+                placementOffset = new Vector3(-.7f, 0, 0);
                 break;
 
             case 3:
-                placementOffset = new Vector3(0, 0, -.3f);
+                placementOffset = new Vector3(0, 0, -.7f);
                 break;
         }
         

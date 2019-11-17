@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     private BoardField currentPlace;
 
     [SerializeField] private Material[] colorsOfPieces;
+    public List<Buyable> ownedFields = new List<Buyable>();
 
     public void initialize()
     {
@@ -91,5 +92,6 @@ public class Player : MonoBehaviour
                 yield return rotate(movingForward ? 90 : -90);
             }
         }
+        yield return currentPlace.visit(this);
     }
 }
