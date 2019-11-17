@@ -66,11 +66,22 @@ public class GameController : MonoBehaviour
             foreach (var player in players)
             {
                 PlayerInfo.instance.setPlayer(player.getName(), player.getBalance());
-                yield return DiceManager.instance.rollDie();
-                int[] dieRollResults = DiceManager.instance.getDieRollResults();
-                Debug.Log("Got " + dieRollResults.Sum());
+                int[] dieRollResults = new int[2];
+                do
+                {
+                    yield return PlayerAction.instance.askPlayerForChoice();
+                    var userChoice = PlayerAction.instance.getChosen();
 
-                yield return player.takeSteps(dieRollResults.Sum());
+                    if (userChoice == PlayerAction.Action.RollDice)
+                    {
+                        yield return DiceManager.instance.rollDie();
+                        dieRollResults = DiceManager.instance.getDieRollResults();
+                        Debug.Log("Got " + dieRollResults.Sum());
+
+                        yield return player.takeSteps(dieRollResults.Sum());
+                    }
+                } while (dieRollResults.Length != dieRollResults.Distinct().Count());
+ 
             }
         }
     }
