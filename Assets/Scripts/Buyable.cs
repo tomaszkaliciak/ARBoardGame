@@ -27,6 +27,11 @@ public abstract class Buyable : BoardField
                 player.updateBalanceBy(-purchasePrice);
                 player.ownedFields.Add(this);
                 owner = player;
+
+                var playerColor = player.gameObject.GetComponent<MeshRenderer>().sharedMaterial;
+                var outline = transform.GetChild(0);
+                outline.gameObject.GetComponent<MeshRenderer>().sharedMaterial = playerColor;
+                outline.gameObject.SetActive(true);
             }
         }
         else if (owner && owner != player)
