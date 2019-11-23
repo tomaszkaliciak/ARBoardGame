@@ -10,7 +10,44 @@ public abstract class Buyable : BoardField
     [SerializeField] private int purchasePrice;
     [SerializeField] private string courseName;
     [SerializeField] public Sprite graphics;
+    Collider coll;
 
+    // TODO: cleaup (https://answers.unity.com/questions/527665/mouse-click-a-collision-mesh.html)
+    void Start()
+    {
+        coll = this.gameObject.GetComponent<Collider>();
+
+        MeshFilter r = this.gameObject.GetComponent<MeshFilter>();
+        if (r != null)
+        {
+            Mesh m = r.sharedMesh;
+            if (m != null)
+            {
+                int[] tris = m.triangles;
+                for (int i = 0; i < tris.Length; i += 3)
+                {
+                    int t = tris[i];
+                    tris[i] = tris[i + 1];
+                    tris[i + 1] = t;
+                }
+                m.triangles = tris;
+            }
+        }
+    }
+
+    void Update()
+    {
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            if (coll.Raycast(ray, out hit, 1000.0f))
+            {
+                FieldInfo.instance.display(this);
+            }
+        }
+    }
     public override void passThrough(Player player)
     { }
 
