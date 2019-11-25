@@ -643,11 +643,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  department: 7
-  resitPrice: 2
   purchasePrice: 2
   courseName: 2
   graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  department: 7
+  housePrice: 33
+  resitPrices: 2d0000006f000000de0000004d010000bc0100002b020000
 --- !u!1 &98796903
 GameObject:
   m_ObjectHideFlags: 0
@@ -1137,8 +1138,8 @@ GameObject:
   - component: {fileID: 153578423}
   - component: {fileID: 153578422}
   - component: {fileID: 153578421}
-  - component: {fileID: 153578420}
   - component: {fileID: 153578424}
+  - component: {fileID: 153578420}
   m_Layer: 0
   m_Name: 25
   m_TagString: Untagged
@@ -1229,14 +1230,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 153578419}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83c17e0ebbf30db44bfe03dfad587a38, type: 3}
+  m_Script: {fileID: 11500000, guid: 960e471d3b1c60c42a98e622184c68a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  department: 8
-  resitPrice: 11
-  purchasePrice: 11
-  courseName: 222
+  purchasePrice: 22
+  courseName: 
   graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
 --- !u!1 &162923850
 GameObject:
@@ -1345,11 +1344,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  department: 5
-  resitPrice: 322
   purchasePrice: 23
   courseName: 33
   graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  department: 5
+  housePrice: 22
+  resitPrices: 050000006f000000de0000004d010000bc0100002b020000
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -1787,11 +1787,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  department: 2
-  resitPrice: 109
   purchasePrice: 10
   courseName: 10
   graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  department: 2
+  housePrice: 133
+  resitPrices: 3200000096000000fa0000005e010000c201000026020000
 --- !u!1 &256853660
 GameObject:
   m_ObjectHideFlags: 0
@@ -2005,11 +2006,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  department: 0
-  resitPrice: 10
   purchasePrice: 10
   courseName: aaa
   graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  department: 0
+  housePrice: 20
+  resitPrices: 1400000078000000dc00000040010000a401000008020000
 --- !u!1 &268567705
 GameObject:
   m_ObjectHideFlags: 0
@@ -2021,8 +2023,8 @@ GameObject:
   - component: {fileID: 268567709}
   - component: {fileID: 268567708}
   - component: {fileID: 268567707}
-  - component: {fileID: 268567706}
   - component: {fileID: 268567710}
+  - component: {fileID: 268567706}
   m_Layer: 0
   m_Name: 15
   m_TagString: Untagged
@@ -2113,14 +2115,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 268567705}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83c17e0ebbf30db44bfe03dfad587a38, type: 3}
+  m_Script: {fileID: 11500000, guid: 960e471d3b1c60c42a98e622184c68a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  department: 8
-  resitPrice: 33
-  purchasePrice: 33
-  courseName: 32
+  purchasePrice: 22
+  courseName: 
   graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
 --- !u!1 &275362682
 GameObject:
@@ -2321,11 +2321,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  department: 6
-  resitPrice: 232
   purchasePrice: 3232
   courseName: rd
   graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  department: 6
+  housePrice: 23
+  resitPrices: 0c0000006f000000de0000004d010000bc0100002b020000
 --- !u!1 &290352962
 GameObject:
   m_ObjectHideFlags: 0
@@ -2525,11 +2526,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  department: 2
-  resitPrice: 10
   purchasePrice: 101
   courseName: 10
   graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  department: 2
+  housePrice: 13
+  resitPrices: 64000000c80000002c01000090010000f401000058020000
 --- !u!1 &301751055
 GameObject:
   m_ObjectHideFlags: 0
@@ -3304,11 +3306,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  department: 7
-  resitPrice: 11
   purchasePrice: 11
   courseName: 11
   graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  department: 7
+  housePrice: 44
+  resitPrices: 6f000000de0000004d010000bc0100002b0200009a020000
 --- !u!1 &437881055
 GameObject:
   m_ObjectHideFlags: 0
@@ -3599,11 +3602,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  department: 5
-  resitPrice: 33
   purchasePrice: 22
   courseName: 33
   graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  department: 5
+  housePrice: 33
+  resitPrices: 280000006f000000de0000004d010000bc0100002b020000
 --- !u!1 &505904413
 GameObject:
   m_ObjectHideFlags: 0
@@ -3615,8 +3619,8 @@ GameObject:
   - component: {fileID: 505904417}
   - component: {fileID: 505904416}
   - component: {fileID: 505904415}
-  - component: {fileID: 505904414}
   - component: {fileID: 505904418}
+  - component: {fileID: 505904414}
   m_Layer: 0
   m_Name: 35
   m_TagString: Untagged
@@ -3707,14 +3711,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 505904413}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83c17e0ebbf30db44bfe03dfad587a38, type: 3}
+  m_Script: {fileID: 11500000, guid: 960e471d3b1c60c42a98e622184c68a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  department: 8
-  resitPrice: 23
-  purchasePrice: 23
-  courseName: 23
+  purchasePrice: 33
+  courseName: 
   graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
 --- !u!1 &517389266
 GameObject:
@@ -5023,14 +5025,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 774427630}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83c17e0ebbf30db44bfe03dfad587a38, type: 3}
+  m_Script: {fileID: 11500000, guid: 960e471d3b1c60c42a98e622184c68a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  department: 8
-  resitPrice: 10
-  purchasePrice: 10
-  courseName: 10
+  purchasePrice: 20
+  courseName: test
   graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
 --- !u!1 &784936769
 GameObject:
@@ -5227,8 +5227,8 @@ GameObject:
   - component: {fileID: 824095287}
   - component: {fileID: 824095286}
   - component: {fileID: 824095285}
-  - component: {fileID: 824095284}
   - component: {fileID: 824095288}
+  - component: {fileID: 824095284}
   m_Layer: 0
   m_Name: 22
   m_TagString: Untagged
@@ -5319,14 +5319,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 824095283}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83c17e0ebbf30db44bfe03dfad587a38, type: 3}
+  m_Script: {fileID: 11500000, guid: 960e471d3b1c60c42a98e622184c68a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  department: 8
-  resitPrice: 23
-  purchasePrice: 2323
-  courseName: 3
+  purchasePrice: 33
+  courseName: 
   graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
 --- !u!1 &839110421
 GameObject:
@@ -5435,11 +5433,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  department: 2
-  resitPrice: 32
   purchasePrice: 32
   courseName: 43
   graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  department: 2
+  housePrice: 23
+  resitPrices: 6e000000d2000000360100009a010000fe01000062020000
 --- !u!1 &873829734
 GameObject:
   m_ObjectHideFlags: 0
@@ -6091,14 +6090,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 965326613}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83c17e0ebbf30db44bfe03dfad587a38, type: 3}
+  m_Script: {fileID: 11500000, guid: 960e471d3b1c60c42a98e622184c68a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  department: 8
-  resitPrice: 10
-  purchasePrice: 101
-  courseName: 10
+  purchasePrice: 32
+  courseName: 
   graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
 --- !u!1 &980552563
 GameObject:
@@ -6545,11 +6542,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  department: 3
-  resitPrice: 10
   purchasePrice: 10
   courseName: 10
   graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  department: 3
+  housePrice: 234
+  resitPrices: 3200000096000000de0000004d010000bc0100002b020000
 --- !u!1 &1100031380
 GameObject:
   m_ObjectHideFlags: 0
@@ -7063,11 +7061,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  department: 5
-  resitPrice: 23
   purchasePrice: 224
   courseName: 234
   graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  department: 5
+  housePrice: 222
+  resitPrices: 220000006f000000de0000004d010000bc0100002b020000
 --- !u!1 &1183541444
 GameObject:
   m_ObjectHideFlags: 0
@@ -7359,11 +7358,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  department: 4
-  resitPrice: 3
   purchasePrice: 230
   courseName: 3232
   graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  department: 4
+  housePrice: 20
+  resitPrices: 160000006f000000de0000004d0100002c0000002b020000
 --- !u!1 &1252717471
 GameObject:
   m_ObjectHideFlags: 0
@@ -7622,11 +7622,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  department: 3
-  resitPrice: 11
   purchasePrice: 11
   courseName: 11
   graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  department: 3
+  housePrice: 244
+  resitPrices: 1e00000082000000e60000004a010000b801000026020000
 --- !u!1 &1336023643
 GameObject:
   m_ObjectHideFlags: 0
@@ -7734,11 +7735,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  department: 4
-  resitPrice: 332
   purchasePrice: 232
   courseName: 232
   graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  department: 4
+  housePrice: 20
+  resitPrices: 0b0000006f000000de0000004d010000bc0100002b020000
 --- !u!1 &1360762985
 GameObject:
   m_ObjectHideFlags: 0
@@ -8220,13 +8222,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1462965289}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83c17e0ebbf30db44bfe03dfad587a38, type: 3}
+  m_Script: {fileID: 11500000, guid: 960e471d3b1c60c42a98e622184c68a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  department: 8
-  resitPrice: 0
-  purchasePrice: 0
+  purchasePrice: 33
   courseName: 
   graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
 --- !u!1 &1479955009
@@ -8428,11 +8428,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  department: 4
-  resitPrice: 23
   purchasePrice: 323
   courseName: 323
   graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  department: 4
+  housePrice: 30
+  resitPrices: 320000006f000000de0000004d010000bc0100002b020000
 --- !u!1 &1505209686
 GameObject:
   m_ObjectHideFlags: 0
@@ -8540,11 +8541,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  department: 1
-  resitPrice: 10
   purchasePrice: 10
   courseName: 10
   graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  department: 1
+  housePrice: 44
+  resitPrices: 1400000078000000dc00000040010000a401000008020000
 --- !u!1 &1506441565
 GameObject:
   m_ObjectHideFlags: 0
@@ -8652,11 +8654,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  department: 3
-  resitPrice: 10
   purchasePrice: 10
   courseName: 10
   graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  department: 3
+  housePrice: 20
+  resitPrices: 0b0000006f000000de0000004d010000bc0100002b020000
 --- !u!1 &1508959150
 GameObject:
   m_ObjectHideFlags: 0
@@ -8764,11 +8767,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  department: 1
-  resitPrice: 10
   purchasePrice: 10
   courseName: 10
   graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  department: 1
+  housePrice: 33
+  resitPrices: 3200000096000000fa0000005e010000c201000026020000
 --- !u!1 &1532492289
 GameObject:
   m_ObjectHideFlags: 0
@@ -8905,8 +8909,8 @@ GameObject:
   - component: {fileID: 1545328820}
   - component: {fileID: 1545328819}
   - component: {fileID: 1545328818}
-  - component: {fileID: 1545328817}
   - component: {fileID: 1545328821}
+  - component: {fileID: 1545328817}
   m_Layer: 0
   m_Name: 36
   m_TagString: Untagged
@@ -8997,14 +9001,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1545328816}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83c17e0ebbf30db44bfe03dfad587a38, type: 3}
+  m_Script: {fileID: 11500000, guid: 960e471d3b1c60c42a98e622184c68a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  department: 8
-  resitPrice: 332
-  purchasePrice: 3223
-  courseName: 32
+  purchasePrice: 22
+  courseName: 
   graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
 --- !u!1001 &1554818939
 PrefabInstance:
@@ -9640,8 +9642,8 @@ GameObject:
   - component: {fileID: 1655953882}
   - component: {fileID: 1655953881}
   - component: {fileID: 1655953880}
-  - component: {fileID: 1655953879}
   - component: {fileID: 1655953883}
+  - component: {fileID: 1655953879}
   m_Layer: 0
   m_Name: 38
   m_TagString: Untagged
@@ -9732,14 +9734,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1655953878}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83c17e0ebbf30db44bfe03dfad587a38, type: 3}
+  m_Script: {fileID: 11500000, guid: 960e471d3b1c60c42a98e622184c68a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  department: 8
-  resitPrice: 22
-  purchasePrice: 22
-  courseName: 22
+  purchasePrice: 33
+  courseName: 
   graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
 --- !u!1 &1667279992
 GameObject:
@@ -10028,14 +10028,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1681648240}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83c17e0ebbf30db44bfe03dfad587a38, type: 3}
+  m_Script: {fileID: 11500000, guid: 960e471d3b1c60c42a98e622184c68a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  department: 8
-  resitPrice: 11
-  purchasePrice: 1
-  courseName: 1
+  purchasePrice: 33
+  courseName: 
   graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
 --- !u!1001 &1713372337
 PrefabInstance:
@@ -10210,14 +10208,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1717024160}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83c17e0ebbf30db44bfe03dfad587a38, type: 3}
+  m_Script: {fileID: 11500000, guid: 960e471d3b1c60c42a98e622184c68a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  department: 8
-  resitPrice: 2323
-  purchasePrice: 3
-  courseName: 333
+  purchasePrice: 22
+  courseName: 
   graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
 --- !u!1 &1734725255
 GameObject:
@@ -10418,11 +10414,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  department: 6
-  resitPrice: 23
   purchasePrice: 22
   courseName: 233
   graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  department: 6
+  housePrice: 33
+  resitPrices: 180000006f000000de0000004d010000bc01000037000000
 --- !u!1 &1746427352
 GameObject:
   m_ObjectHideFlags: 0
@@ -10652,11 +10649,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  department: 6
-  resitPrice: 23
   purchasePrice: 23
   courseName: 232323
   graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  department: 6
+  housePrice: 31
+  resitPrices: 200000006f000000de0000004d010000bc0100002b020000
 --- !u!1 &1795948736
 GameObject:
   m_ObjectHideFlags: 0
@@ -10764,11 +10762,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  department: 0
-  resitPrice: 10
   purchasePrice: 10
   courseName: 10
   graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  department: 0
+  housePrice: 20
+  resitPrices: 64000000c80000002c01000090010000f401000058020000
 --- !u!1 &1821116489
 GameObject:
   m_ObjectHideFlags: 0
@@ -11721,11 +11720,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  department: 1
-  resitPrice: 10
   purchasePrice: 101
   courseName: 100
   graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  department: 1
+  housePrice: 44
+  resitPrices: 3200000096000000fa0000005e010000c201000026020000
 --- !u!1 &1926858861
 GameObject:
   m_ObjectHideFlags: 0
@@ -11998,14 +11998,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1980368886}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83c17e0ebbf30db44bfe03dfad587a38, type: 3}
+  m_Script: {fileID: 11500000, guid: 960e471d3b1c60c42a98e622184c68a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  department: 8
-  resitPrice: 2332
-  purchasePrice: 2323
-  courseName: 2323
+  purchasePrice: 33
+  courseName: 
   graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
 --- !u!1 &1994248376
 GameObject:
@@ -12503,14 +12501,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2037758249}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83c17e0ebbf30db44bfe03dfad587a38, type: 3}
+  m_Script: {fileID: 11500000, guid: 960e471d3b1c60c42a98e622184c68a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  department: 8
-  resitPrice: 10
-  purchasePrice: 101
-  courseName: 10
+  purchasePrice: 22
+  courseName: 
   graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
 --- !u!1 &2052323587
 GameObject:
@@ -12787,7 +12783,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2069087028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12995,14 +12991,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2099202847}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83c17e0ebbf30db44bfe03dfad587a38, type: 3}
+  m_Script: {fileID: 11500000, guid: 960e471d3b1c60c42a98e622184c68a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  department: 8
-  resitPrice: 10
-  purchasePrice: 10
-  courseName: 10
+  purchasePrice: 22
+  courseName: 
   graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
 --- !u!1 &2100999342
 GameObject:

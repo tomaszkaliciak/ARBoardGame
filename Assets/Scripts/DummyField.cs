@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class DummyField : Buyable
 {
-    public override void passThrough(Player player) {}
+    private int resitPrice;
 
+    public override void passThrough(Player player) { }
+
+    protected override int chargeForResit()
+    {
+        return resitPrice;
+    }
 }
