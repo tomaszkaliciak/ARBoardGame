@@ -12,7 +12,12 @@ public class Course : Buyable
 
     private int currentLevel;
 
-    public override void passThrough(Player player) {}
+    public Department getDepartment()
+    {
+        return department;
+    }
+
+    public override void passThrough(Player player) { }
 
     protected override int chargeForResit()
     {

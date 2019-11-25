@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -79,6 +80,11 @@ public abstract class Buyable : BoardField
             player.updateBalanceBy(-cost);
             owner.updateBalanceBy(cost);
         }
+    }
+
+    public Player getCurrentOwner()
+    {
+        return owner;
     }
 
     protected abstract int chargeForResit();

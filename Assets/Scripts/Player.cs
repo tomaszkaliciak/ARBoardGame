@@ -94,4 +94,25 @@ public class Player : MonoBehaviour
         }
         yield return currentPlace.visit(this);
     }
+
+    public bool doesPlayerOwnADepartment(Course course)
+    {
+        uint numberOfCoursesFromTheSameDepartment = 0;
+        uint numberOfCoursesFromTheSameDepartmentOwnedByPlayer = 0;
+
+        foreach (var c in course.transform.parent.GetComponentsInChildren<Course>())
+        {
+            if (c.getDepartment() == course.getDepartment())
+            {
+                var currentOwner = c.getCurrentOwner();
+                if (currentOwner && currentOwner == this)
+                {
+                    ++numberOfCoursesFromTheSameDepartmentOwnedByPlayer;
+                }
+                ++numberOfCoursesFromTheSameDepartment;
+            }
+        }
+
+        return numberOfCoursesFromTheSameDepartment == numberOfCoursesFromTheSameDepartmentOwnedByPlayer;
+    }
 }
