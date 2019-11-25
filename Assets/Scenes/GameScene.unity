@@ -643,6 +643,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
+  department: 7
   resitPrice: 2
   purchasePrice: 2
   courseName: 2
@@ -1232,6 +1233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
+  department: 8
   resitPrice: 11
   purchasePrice: 11
   courseName: 222
@@ -1343,6 +1345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
+  department: 5
   resitPrice: 322
   purchasePrice: 23
   courseName: 33
@@ -1784,6 +1787,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
+  department: 2
   resitPrice: 109
   purchasePrice: 10
   courseName: 10
@@ -2001,6 +2005,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
+  department: 0
   resitPrice: 10
   purchasePrice: 10
   courseName: aaa
@@ -2112,6 +2117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
+  department: 8
   resitPrice: 33
   purchasePrice: 33
   courseName: 32
@@ -2315,6 +2321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
+  department: 6
   resitPrice: 232
   purchasePrice: 3232
   courseName: rd
@@ -2518,6 +2525,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
+  department: 2
   resitPrice: 10
   purchasePrice: 101
   courseName: 10
@@ -3296,6 +3304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
+  department: 7
   resitPrice: 11
   purchasePrice: 11
   courseName: 11
@@ -3590,6 +3599,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
+  department: 5
   resitPrice: 33
   purchasePrice: 22
   courseName: 33
@@ -3701,6 +3711,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
+  department: 8
   resitPrice: 23
   purchasePrice: 23
   courseName: 23
@@ -3841,7 +3852,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 522508192}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.9, y: 14.7, z: -3.7}
+  m_LocalPosition: {x: 1.93, y: 16.78, z: -3.45}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 350447806}
@@ -5016,6 +5027,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
+  department: 8
   resitPrice: 10
   purchasePrice: 10
   courseName: 10
@@ -5311,6 +5323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
+  department: 8
   resitPrice: 23
   purchasePrice: 2323
   courseName: 3
@@ -5422,6 +5435,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
+  department: 2
   resitPrice: 32
   purchasePrice: 32
   courseName: 43
@@ -6081,6 +6095,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
+  department: 8
   resitPrice: 10
   purchasePrice: 101
   courseName: 10
@@ -6530,6 +6545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
+  department: 3
   resitPrice: 10
   purchasePrice: 10
   courseName: 10
@@ -7047,6 +7063,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
+  department: 5
   resitPrice: 23
   purchasePrice: 224
   courseName: 234
@@ -7342,6 +7359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
+  department: 4
   resitPrice: 3
   purchasePrice: 230
   courseName: 3232
@@ -7604,6 +7622,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
+  department: 3
   resitPrice: 11
   purchasePrice: 11
   courseName: 11
@@ -7715,6 +7734,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
+  department: 4
   resitPrice: 332
   purchasePrice: 232
   courseName: 232
@@ -8204,6 +8224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
+  department: 8
   resitPrice: 0
   purchasePrice: 0
   courseName: 
@@ -8407,6 +8428,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
+  department: 4
   resitPrice: 23
   purchasePrice: 323
   courseName: 323
@@ -8518,6 +8540,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
+  department: 1
   resitPrice: 10
   purchasePrice: 10
   courseName: 10
@@ -8629,6 +8652,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
+  department: 3
   resitPrice: 10
   purchasePrice: 10
   courseName: 10
@@ -8740,6 +8764,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
+  department: 1
   resitPrice: 10
   purchasePrice: 10
   courseName: 10
@@ -8976,6 +9001,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
+  department: 8
   resitPrice: 332
   purchasePrice: 3223
   courseName: 32
@@ -9710,6 +9736,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
+  department: 8
   resitPrice: 22
   purchasePrice: 22
   courseName: 22
@@ -10005,6 +10032,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
+  department: 8
   resitPrice: 11
   purchasePrice: 1
   courseName: 1
@@ -10030,7 +10058,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4550394971055228, guid: 8634c6563b6864d4ea53f8c9588a3a0b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.02
+      value: 6.4
       objectReference: {fileID: 0}
     - target: {fileID: 4550394971055228, guid: 8634c6563b6864d4ea53f8c9588a3a0b, type: 3}
       propertyPath: m_LocalRotation.x
@@ -10186,6 +10214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
+  department: 8
   resitPrice: 2323
   purchasePrice: 3
   courseName: 333
@@ -10389,6 +10418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
+  department: 6
   resitPrice: 23
   purchasePrice: 22
   courseName: 233
@@ -10622,6 +10652,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
+  department: 6
   resitPrice: 23
   purchasePrice: 23
   courseName: 232323
@@ -10733,6 +10764,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
+  department: 0
   resitPrice: 10
   purchasePrice: 10
   courseName: 10
@@ -11689,6 +11721,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
+  department: 1
   resitPrice: 10
   purchasePrice: 101
   courseName: 100
@@ -11969,6 +12002,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
+  department: 8
   resitPrice: 2332
   purchasePrice: 2323
   courseName: 2323
@@ -12473,6 +12507,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
+  department: 8
   resitPrice: 10
   purchasePrice: 101
   courseName: 10
@@ -12752,7 +12787,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2069087028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12964,6 +12999,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
+  department: 8
   resitPrice: 10
   purchasePrice: 10
   courseName: 10

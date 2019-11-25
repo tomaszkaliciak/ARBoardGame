@@ -5,11 +5,14 @@ using UnityEngine;
 public abstract class Buyable : BoardField
 {
     protected Player owner;
+    public enum Department { K1, K2, K3, K4, K5, K6, K7, K8, NA };
 
+    [SerializeField] private Department department;
     [SerializeField] private int resitPrice;
     [SerializeField] private int purchasePrice;
     [SerializeField] private string courseName;
     [SerializeField] public Sprite graphics;
+    
     Collider coll;
 
     // TODO: cleaup (https://answers.unity.com/questions/527665/mouse-click-a-collision-mesh.html)
