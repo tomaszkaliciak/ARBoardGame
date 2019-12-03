@@ -10,7 +10,7 @@ public class Course : Buyable
     [SerializeField] private int housePrice;
     [SerializeField] private int[] resitPrices = new int[6];
 
-    private int currentLevel;
+    private int currentLevel = 0;
 
     public Department getDepartment()
     {
@@ -22,5 +22,9 @@ public class Course : Buyable
     protected override int chargeForResit()
     {
         return resitPrices[currentLevel];
+    }
+    public int getCurrentLevel()
+    {
+        return currentLevel;
     }
 }

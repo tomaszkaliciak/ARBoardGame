@@ -11,10 +11,10 @@ public abstract class BoardField : MonoBehaviour
     {
         const int numberOfFields = 40;
         int siblingIndex = transform.GetSiblingIndex();
-        
+        var parent = gameObject.transform.parent;
         nextField = siblingIndex < numberOfFields ?
-            gameObject.transform.parent.GetChild(siblingIndex + 1).gameObject.GetComponent<BoardField>() :
-            gameObject.transform.parent.GetChild(1).gameObject.GetComponent<BoardField>();
+            parent.GetChild(siblingIndex + 1).gameObject.GetComponent<BoardField>() :
+            parent.GetChild(1).gameObject.GetComponent<BoardField>();
 
         init();
     }

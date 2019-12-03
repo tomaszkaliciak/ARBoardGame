@@ -7,10 +7,12 @@ public abstract class Buyable : BoardField
 {
     protected Player owner;
 
+    private bool mortgage = false;
     [SerializeField] private int purchasePrice;
     [SerializeField] private string courseName;
     [SerializeField] public Sprite graphics;
-    
+
+    //TODO: it shouldn't display FieldInfo when for example player is asked if he wants buy a new field
     Collider coll;
 
     // TODO: cleaup (https://answers.unity.com/questions/527665/mouse-click-a-collision-mesh.html)
@@ -49,13 +51,14 @@ public abstract class Buyable : BoardField
             }
         }
     }
+
     public override void passThrough(Player player)
-    { }
+    {
+    }
 
     public override IEnumerator visit(Player player)
     {
         Debug.Log("visit ");
-
         if (player.getBalance() > this.purchasePrice && owner == null)
         {
             yield return PurchaseDialog.instance.OfferPurchase(this);
@@ -72,19 +75,38 @@ public abstract class Buyable : BoardField
                 outline.gameObject.SetActive(true);
             }
         }
-        else if (owner && owner != player)
+        else if (owner && owner != player && !this.mortgage)
         {
             Debug.Log(player.name + "is not owner");
-
             int cost = chargeForResit();
             player.updateBalanceBy(-cost);
             owner.updateBalanceBy(cost);
         }
     }
-
+  
+    public void takeMortgage()
+    {
+        if (mortgage || owner is null) return;
+        gameObject.transform.GetChild(1).gameObject.SetActive(true);
+        owner.updateBalanceBy(purchasePrice/2);
+        mortgage = true;
+    }
+    public void repayMortgage()
+    {
+        if (!mortgage || owner is null) return;
+        gameObject.transform.GetChild(1).gameObject.SetActive(false);
+        owner.updateBalanceBy(-purchasePrice/2);
+        mortgage = false;
+    }
+    
     public Player getCurrentOwner()
     {
         return owner;
+    }
+
+    public bool isPledged()
+    {
+        return mortgage;
     }
 
     protected abstract int chargeForResit();

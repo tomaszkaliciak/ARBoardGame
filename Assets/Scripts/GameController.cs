@@ -7,6 +7,7 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     private List<Player> players;
+    private Player currentPlayer;
     public static GameController instance;
 
     [SerializeField] private GameObject playerPrefab;
@@ -65,6 +66,7 @@ public class GameController : MonoBehaviour
         {
             foreach (var player in players)
             {
+                currentPlayer = player;
                 PlayerInfo.instance.setPlayer(player.getName(), player.getBalance());
                 int[] dieRollResults = new int[2];
                 do
@@ -84,5 +86,10 @@ public class GameController : MonoBehaviour
  
             }
         }
+    }
+
+    public Player getCurrentPlayer()
+    {
+        return currentPlayer;
     }
 }
