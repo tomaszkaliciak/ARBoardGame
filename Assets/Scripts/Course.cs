@@ -27,4 +27,21 @@ public class Course : Buyable
     {
         return currentLevel;
     }
+
+    public int getUpgradeCost()
+    {
+        return housePrice;
+    }
+
+    public void upgradeField()
+    {
+        transform.GetChild(2).gameObject.transform.GetChild(currentLevel).gameObject.SetActive(true);
+        ++currentLevel;
+    }
+
+    public void downgradeField()
+    {
+        --currentLevel;
+        transform.GetChild(2).gameObject.transform.GetChild(currentLevel).gameObject.SetActive(false);
+    }
 }
