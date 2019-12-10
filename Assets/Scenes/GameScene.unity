@@ -2281,7 +2281,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3f9a9550e357df5428abd9098a2a41ad, type: 2}
+  - {fileID: 2100000, guid: fb9fd4e0e4d43f54a8b68fafab9efd10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4350,7 +4350,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3f9a9550e357df5428abd9098a2a41ad, type: 2}
+  - {fileID: 2100000, guid: fb9fd4e0e4d43f54a8b68fafab9efd10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7966,7 +7966,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3f9a9550e357df5428abd9098a2a41ad, type: 2}
+  - {fileID: 2100000, guid: fb9fd4e0e4d43f54a8b68fafab9efd10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18133,7 +18133,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3f9a9550e357df5428abd9098a2a41ad, type: 2}
+  - {fileID: 2100000, guid: fb9fd4e0e4d43f54a8b68fafab9efd10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -21162,8 +21162,8 @@ GameObject:
   - component: {fileID: 1655953882}
   - component: {fileID: 1655953881}
   - component: {fileID: 1655953880}
-  - component: {fileID: 1655953883}
   - component: {fileID: 1655953879}
+  - component: {fileID: 1655953883}
   m_Layer: 0
   m_Name: 38
   m_TagString: Untagged
@@ -21202,7 +21202,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3f9a9550e357df5428abd9098a2a41ad, type: 2}
+  - {fileID: 2100000, guid: 238f9fcf0eb7b694c8923662135f26f0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -21255,13 +21255,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1655953878}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 960e471d3b1c60c42a98e622184c68a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 4f0aa89397432d7478c0c91e3715507a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  purchasePrice: 33
-  courseName: 
-  graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  cost: 200
 --- !u!1001 &1656575518
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26879,7 +26877,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 416003df2d7135944a8b2d9f9c001106, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -26932,13 +26930,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2099202847}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 960e471d3b1c60c42a98e622184c68a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 4f0aa89397432d7478c0c91e3715507a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  purchasePrice: 22
-  courseName: 
-  graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  cost: 400
 --- !u!1 &2100999342
 GameObject:
   m_ObjectHideFlags: 0
