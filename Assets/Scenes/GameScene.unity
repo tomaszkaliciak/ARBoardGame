@@ -12996,7 +12996,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3f9a9550e357df5428abd9098a2a41ad, type: 2}
+  - {fileID: 2100000, guid: 331e7c3915c023f4eb73bc25beb2c742, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13049,13 +13049,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 965326613}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 960e471d3b1c60c42a98e622184c68a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 46e6bdb6eca34624998f38d699ebd91a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  purchasePrice: 32
+  purchasePrice: 100
   courseName: 
-  graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  graphics: {fileID: 0}
 --- !u!1001 &967291689
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22062,7 +22062,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3f9a9550e357df5428abd9098a2a41ad, type: 2}
+  - {fileID: 2100000, guid: 064265a26f00d9042b7e31d188b21bcb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -22115,13 +22115,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1717024160}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 960e471d3b1c60c42a98e622184c68a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 46e6bdb6eca34624998f38d699ebd91a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  purchasePrice: 22
+  purchasePrice: 200
   courseName: 
-  graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  graphics: {fileID: 0}
 --- !u!1 &1722285863
 GameObject:
   m_ObjectHideFlags: 0
@@ -26682,7 +26682,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2080584732}
   m_LocalRotation: {x: 0.000000029802322, y: 0.000000029802322, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -1, y: -0.55000025, z: -0.0009999275}
+  m_LocalPosition: {x: 0, y: -0.55, z: -0.001}
   m_LocalScale: {x: 0.10000006, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 965326617}
