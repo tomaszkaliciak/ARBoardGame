@@ -59,12 +59,6 @@ public class GameController : MonoBehaviour
         Debug.LogError("startGame");
         StartCoroutine(playGame());
     }
-
-    private IEnumerator askPlayerForChoice(Player player)
-    {
-        yield return PlayerAction.instance.askPlayerForChoice(player);
-    }
-    
     private IEnumerator playGame()
     {
         while (true)
