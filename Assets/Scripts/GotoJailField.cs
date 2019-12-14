@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class GotoJailField : BoardField
 {
-    public override void passThrough(Player player){}
-
     public override IEnumerator visit(Player player)
     {
         player.getToPrison();

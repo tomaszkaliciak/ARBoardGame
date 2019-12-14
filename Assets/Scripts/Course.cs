@@ -17,8 +17,6 @@ public class Course : Buyable
         return department;
     }
 
-    public override void passThrough(Player player) { }
-
     protected override int chargeForResit()
     {
         return resitPrices[currentLevel];

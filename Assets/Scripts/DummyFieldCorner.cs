@@ -4,5 +4,4 @@ using UnityEngine;
 
 public class DummyFieldCorner : BoardField
 {
-    public override void passThrough(Player player){}
 }

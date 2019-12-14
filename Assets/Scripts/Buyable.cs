@@ -51,11 +51,7 @@ public abstract class Buyable : BoardField
             }
         }
     }
-
-    public override void passThrough(Player player)
-    {
-    }
-
+  
     public override IEnumerator visit(Player player)
     {
         Debug.Log("visit ");

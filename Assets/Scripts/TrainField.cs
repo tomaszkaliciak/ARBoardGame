@@ -5,8 +5,6 @@ using UnityEngine;
 public class TrainField : Buyable
 {
     private int resitPrice = 50;
-    public override void passThrough(Player player) { }
-
     protected override int chargeForResit()
     {
         return resitPrice * getAmountOfRailwaysOwnedByOwner();

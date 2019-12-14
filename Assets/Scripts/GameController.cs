@@ -60,6 +60,11 @@ public class GameController : MonoBehaviour
         StartCoroutine(playGame());
     }
 
+    private IEnumerator askPlayerForChoice(Player player)
+    {
+        yield return PlayerAction.instance.askPlayerForChoice(player);
+    }
+    
     private IEnumerator playGame()
     {
         while (true)
@@ -71,9 +76,16 @@ public class GameController : MonoBehaviour
                 int[] dieRollResults = new int[2];
                 do
                 {
-                    yield return PlayerAction.instance.askPlayerForChoice();
-                    var userChoice = PlayerAction.instance.getChosen();
+                    yield return PlayerAction.instance.askPlayerForChoice(player);
+                    if (PlayerAction.instance.getChosen() == PlayerAction.Action.GetOutOfPrison)
+                    {
+                        player.updateBalanceBy(-50);
+                        player.getOutOfJail();
+                        yield return PlayerAction.instance.askPlayerForChoice(player);
+                    }
 
+                    var userChoice = PlayerAction.instance.getChosen();
+                    
                     if (userChoice == PlayerAction.Action.RollDice)
                     {
                         yield return DiceManager.instance.rollDie();

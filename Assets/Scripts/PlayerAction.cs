@@ -12,7 +12,7 @@ public class PlayerAction : MonoBehaviour
         instance = this;
     }
 
-    public enum Action { RollDice, NotSet };
+    public enum Action { RollDice, GetOutOfPrison, NotSet };
 
     private Action chosenAction = Action.NotSet;
 
@@ -21,13 +21,18 @@ public class PlayerAction : MonoBehaviour
         return chosenAction;
     }
 
-    public IEnumerator askPlayerForChoice()
+    public IEnumerator askPlayerForChoice(Player player)
     {
         chosenAction = Action.NotSet;
 
         var rollButton = transform.GetChild(0).gameObject;
-
+        var getOutOfPrisonButton = transform.GetChild(1).gameObject;
         rollButton.SetActive(true);
+
+        if (player.isInPrison())
+        {
+            getOutOfPrisonButton.SetActive(true);
+        }
 
         while (chosenAction == Action.NotSet)
         {
@@ -35,9 +40,15 @@ public class PlayerAction : MonoBehaviour
         }
 
         rollButton.SetActive(false);
+        getOutOfPrisonButton.SetActive(false);
     }
     public void roll()
     {
         chosenAction = Action.RollDice;
+    }
+
+    public void payForGettingOutOfPrison()
+    {
+        chosenAction = Action.GetOutOfPrison;
     }
 }
