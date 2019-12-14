@@ -80,7 +80,22 @@ public class GameController : MonoBehaviour
                         dieRollResults = DiceManager.instance.getDieRollResults();
                         Debug.Log("Got " + dieRollResults.Sum());
 
-                        yield return player.takeSteps(dieRollResults.Sum());
+                        if (player.isInPrison())
+                        {
+                            if (dieRollResults.Length != dieRollResults.Distinct().Count())
+                            {
+                                player.getOutOfJail();
+                                yield return player.takeSteps(dieRollResults.Sum());
+                            }
+                            else
+                            {
+                                player.stayInPrisonForThisRound();
+                            }
+                        }
+                        else
+                        {
+                            yield return player.takeSteps(dieRollResults.Sum());
+                        }
                     }
                 } while (dieRollResults.Length != dieRollResults.Distinct().Count());
  

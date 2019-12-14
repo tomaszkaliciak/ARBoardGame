@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
 
     private static int playerID = 0;
     private BoardField currentPlace;
-
+    private int numberOfRoundsInPrisonLeft = 0;
     [SerializeField] private Material[] colorsOfPieces;
     public List<Buyable> ownedFields = new List<Buyable>();
 
@@ -114,5 +114,25 @@ public class Player : MonoBehaviour
         }
 
         return numberOfCoursesFromTheSameDepartment == numberOfCoursesFromTheSameDepartmentOwnedByPlayer;
+    }
+
+    public bool isInPrison()
+    {
+        return numberOfRoundsInPrisonLeft > 0;
+    }
+
+    public void stayInPrisonForThisRound()
+    {
+        numberOfRoundsInPrisonLeft--;
+    }
+
+    public void getOutOfJail()
+    {
+        numberOfRoundsInPrisonLeft = 0;
+    }
+
+    public void getToPrison()
+    {
+        numberOfRoundsInPrisonLeft = 3;
     }
 }
