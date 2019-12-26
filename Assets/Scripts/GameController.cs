@@ -45,9 +45,10 @@ public class GameController : MonoBehaviour
                 Instantiate(
                     playerPrefab,
                     StartField.instance.transform.position + placementOffset,
-                    playerPrefab.transform.rotation)))
+                    transform.rotation)))
             .GetComponent<Player>();
 
+        newPlayer.transform.parent = transform.parent.GetChild(0).transform; 
         newPlayer.setName(playerName);
 
         players.Add(newPlayer);
@@ -104,7 +105,6 @@ public class GameController : MonoBehaviour
                         }
                     }
                 } while (dieRollResults.Length != dieRollResults.Distinct().Count());
- 
             }
         }
     }

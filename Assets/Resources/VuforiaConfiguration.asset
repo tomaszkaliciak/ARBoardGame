@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: VuforiaConfiguration
   m_EditorClassIdentifier: 
   vuforia:
-    vuforiaLicenseKey: 
+    vuforiaLicenseKey: ARn4mNn/////AAABmQORjpc40EtftITdnMGpvyUQm/NjQyFkxmcKGUBT2xruzcQ45vC6TOIVz2d3nKHc35lk+aNl7k/yQumxkJNGNH+TyWaqWglkmY3axYrzNvZuq3zMVZeiUjcifRdmzcmFCyWcvRSTwhMO0A22zbnqH9YPAOE6CUwZ0BGLda7YcRxLqN+sWFFIUQHe3RliAd3bdDvs2kLq1zbiEwMTpPpwhUKRCBjNs3f5ej8ctzPnp5bXS5C18E4+DvLrrpPFlQrYVyVur3QkxV8uW8i8BC8Aayr/F5MuZ/X2GgYczQhz3N5JD9gfVfTKcF1GoGcrOo5zpAiilXMA3VLgFNM4gmOPdS5awl+QFgNLre5PqCYP0HCJ
     ufoLicenseKey: QVNUV1d2WC8vLy8vQUFBQUtJVHROSVBOdEVwRW5OU0RudEo5MklGZ0ZCSzNYcXQ5bnJkbk5CaDBLMmQwSFI1bGJ1RnA3TVBQOUdLUUMyOEx5Vm1FaHdHbENDTE80S0hTaVlWRmtyMXZpQ2dHOUY3WDlybTl0V3RhV0I0cUt2dEZRSFFCUzhHNUxZTUsvSFl0TXNhclRTL0NqM0xHRTR0b0ltcGZrMzh5Y0RjdEdnUUlaZHYyUms5Y0dMbTQrR2oxMkc5QndLMWY3ZlVSa0g5NlBtWUxQSy9JdEh6R285QngyL2FHZzJoaDlzd0VBbWg0Mnl5dk9VZC9JdUg1TXg0Y2Q0OTIzeDVseTNCNk9CRjVNQ0FzSHIvanc2dEtBNVVXd285eFJxTTNQejN6dlQ5YzFjOXk0VTFGR0ZoR3YwTkNhdHBlVlVLOG95VUhRSndxVGRiQXZCVXhvYnhCWHR6cFU1OFFiM1NiNFhScHRwK3RURDQvc3FHNmhJalQ=
     delayedInitialization: 0
     cameraDeviceModeSetting: -1
@@ -21,50 +21,25 @@ MonoBehaviour:
     maxSimultaneousObjectTargets: 1
     useDelayedLoadingObjectTargets: 0
     modelTargetRecoWhileExtendedTracked: 1
-    version: 8.3.8
-    eulaAcceptedVersions: '{"Values":["8.3"]}'
-  digitalEyewear:
-    cameraOffset: 0.06
-    distortionRenderingLayer: 31
-    eyewearType: 0
-    stereoFramework: 0
-    seeThroughConfiguration: 0
-    viewerName: 
-    viewerManufacturer: 
-    useCustomViewer: 0
-    customViewer:
-      Version: 0
-      Name: 
-      Manufacturer: 
-      ButtonType: 0
-      ScreenToLensDistance: 0
-      InterLensDistance: 0
-      TrayAlignment: 0
-      LensCenterToTrayDistance: 0
-      DistortionCoefficients: {x: 0, y: 0}
-      FieldOfView: {x: 0, y: 0, z: 0, w: 0}
-      ContainsMagnet: 0
+    version: 8.6.7
+    eulaAcceptedVersions: '{"Values":["8.3","8.6"]}'
+    modelTargetMode: 0
   database:
     disableModelExtraction: 0
   videoBackground:
-    clippingMode: 0
     numDivisions: 2
-    videoBackgroundShader: {fileID: 0}
-    matteShader: {fileID: 0}
+    videoBackgroundShader: {fileID: 4800000, guid: f40623b353e2f1943b1b3ba42975db7a,
+      type: 3}
     videoBackgroundEnabled: 1
   deviceTracker:
     autoInitTracker: 0
     autoStartTracker: 0
     arcoreRequirement: 0
-    trackingMode: 1
-    posePrediction: 0
-    modelCorrectionMode: 0
-    modelTransformEnabled: 0
-    modelTransform: {x: 0, y: 0.1, z: -0.1}
+    autoImportArcore: 0
   smartTerrain:
     autoInitTracker: 0
     autoStartTracker: 0
   webcam:
-    deviceNameSetInEditor: 
+    deviceNameSetInEditor: Logitech HD Webcam C270
     turnOffWebCam: 0
     renderTextureLayer: 30

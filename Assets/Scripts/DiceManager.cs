@@ -22,7 +22,7 @@ public class DiceManager : MonoBehaviour
 
         for (int i = 0; i < transform.childCount; i++)
         {
-            initialDiePositions[i] = transform.GetChild(i).transform.position;
+            initialDiePositions[i] = transform.GetChild(i).transform.localPosition;
             transform.GetChild(i).gameObject.SetActive(false);
         }
     }
@@ -32,8 +32,8 @@ public class DiceManager : MonoBehaviour
         for (int i = 0; i < transform.childCount; i++)
         {
             transform.GetChild(i).gameObject.SetActive(true);
-            transform.GetChild(i).transform.position = initialDiePositions[i];
-            transform.GetChild(i).transform.rotation = UnityEngine.Random.rotation;
+            transform.GetChild(i).transform.localPosition = initialDiePositions[i];
+            transform.GetChild(i).transform.localRotation = UnityEngine.Random.rotation;
         }
 
         yield return new WaitForSeconds((float)3.5);

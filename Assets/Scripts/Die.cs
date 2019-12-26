@@ -19,4 +19,16 @@ public class Die : MonoBehaviour
 
         return Int32.Parse(sideOnTop.gameObject.name);
     }
+    
+    private void FixedUpdate()
+    {
+        Vector3 direction = transform.parent.position - transform.position;
+        float distance = direction.magnitude;
+
+        if (distance == 0f) return;
+        
+        float forceMagnitude = 50000000f / Mathf.Pow(distance, 2);
+        Vector3 force = direction.normalized * forceMagnitude;
+        gameObject.GetComponent<Rigidbody>().AddForce(force);
+    }
 }

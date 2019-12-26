@@ -35,25 +35,31 @@ public class Player : MonoBehaviour
     {
         float progress = 0;
         float startTime = Time.time;
-        float startAngle = transform.eulerAngles.y;
+        float startAngle = transform.localEulerAngles.y;
 
         while (progress <= .98f)
         {
             progress = Time.time - startTime * 0.5f;
-            transform.eulerAngles = new Vector3(transform.eulerAngles.x, startAngle + degrees * progress, transform.eulerAngles.z);
+            transform.localEulerAngles = new Vector3(
+                transform.localEulerAngles.x, 
+                startAngle + degrees * progress,
+                transform.localEulerAngles.z);
 
             yield return null;
         }
 
-        transform.eulerAngles = new Vector3(transform.eulerAngles.x, startAngle + degrees, transform.eulerAngles.z);
+        transform.localEulerAngles = new Vector3(
+            transform.localEulerAngles.x, 
+            startAngle + degrees,
+            transform.localEulerAngles.z);
     }
 
     public IEnumerator goToField(BoardField field)
     {
         float startTime = Time.time;
 
-        Vector3 startPosition = transform.position; 
-        Vector3 endPosition = field.gameObject.transform.position;
+        Vector3 startPosition = transform.localPosition; 
+        Vector3 endPosition = field.gameObject.transform.localPosition;
 
         Vector3 displacement = endPosition - startPosition;
         displacement.y = 0;
@@ -67,13 +73,13 @@ public class Player : MonoBehaviour
             Vector3 newPosition = startPosition + displacement * progress;
             newPosition.y = -1 * Mathf.Pow(progress - 0.5f, 2) + 0.25f;
 
-            transform.position = newPosition;
+            transform.localPosition = newPosition;
 
             yield return null;
         }
 
         currentPlace = field;
-        transform.position = currentPlace.transform.position;
+        transform.localPosition = currentPlace.transform.localPosition;
     }
 
 
