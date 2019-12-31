@@ -22,13 +22,16 @@ public class Die : MonoBehaviour
     
     private void FixedUpdate()
     {
-        Vector3 direction = transform.parent.position - transform.position;
-        float distance = direction.magnitude;
+        var directionTowardsBoard = transform.localPosition;
+        directionTowardsBoard.x = 0f;
+        directionTowardsBoard.z = 0f;
+        Vector3 directionFromWorldPOV = transform.parent.TransformDirection(directionTowardsBoard);
+        float distance = directionTowardsBoard.y;
 
         if (distance == 0f) return;
-        
-        float forceMagnitude = 50000000f / Mathf.Pow(distance, 2);
-        Vector3 force = direction.normalized * forceMagnitude;
+
+        float forceMagnitude = 150f/Mathf.Pow(distance+1f, 2);
+        Vector3 force = directionFromWorldPOV.normalized * -forceMagnitude;
         gameObject.GetComponent<Rigidbody>().AddForce(force);
     }
 }
