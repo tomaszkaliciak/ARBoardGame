@@ -45,7 +45,7 @@ public abstract class Buyable : BoardField
         {
             var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
-            if (coll.Raycast(ray, out hit, 1000.0f))
+            if (coll.Raycast(ray, out hit, 100.0f) && hit.collider.gameObject == gameObject)
             {
                 FieldInfo.instance.display(this);
             }
