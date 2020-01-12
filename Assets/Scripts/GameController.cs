@@ -67,7 +67,7 @@ public class GameController : MonoBehaviour
             foreach (var player in players)
             {
                 currentPlayer = player;
-                PlayerInfo.instance.setPlayer(player.getName(), player.getBalance());
+                PlayerInfo.instance.setPlayer(player);
                 int[] dieRollResults = new int[2];
                 do
                 {

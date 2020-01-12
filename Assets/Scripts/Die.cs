@@ -8,10 +8,14 @@ public class Die : MonoBehaviour
     public int getDieValue()
     {
         var sideOnTop = transform.GetChild(0);
-
+        var board = transform.parent.parent;
+        
         for (int i = 1; i < transform.childCount; i++)
         {
-            if (transform.GetChild(i).position.y > sideOnTop.position.y)
+            var positionOfCurrentHigherSideRelativeToBoard = board.InverseTransformPoint(sideOnTop.position);
+            var positionOfNewSideRelativeToBoard = board.InverseTransformPoint(transform.GetChild(i).position);
+ 
+            if (positionOfNewSideRelativeToBoard.y > positionOfCurrentHigherSideRelativeToBoard.y)
             {
                 sideOnTop = transform.GetChild(i);
             }

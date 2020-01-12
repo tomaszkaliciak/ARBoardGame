@@ -19,10 +19,11 @@ public class PlayerInfo : MonoBehaviour
         this.balance.text = balance.ToString();
     }
 
-    public void setPlayer(string name, int balance)
+    public void setPlayer(Player currentPlayer)
     {
-        this.playerName.text = name;
-        this.balance.text = balance.ToString();
-
+        this.playerName.text = currentPlayer.name;
+        this.balance.text = currentPlayer.getBalance().ToString();
+        var playerColor = currentPlayer.gameObject.GetComponent<MeshRenderer>().sharedMaterial;
+        gameObject.GetComponent<MeshRenderer>().sharedMaterial = playerColor;
     }
 }
