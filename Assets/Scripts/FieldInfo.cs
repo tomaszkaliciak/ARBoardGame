@@ -12,6 +12,7 @@ public class FieldInfo : MonoBehaviour
     private GameObject mortgageButton;
     private GameObject upgradeFieldButton;
     private GameObject downgradeFieldButton;
+    private GameObject text;
     void Awake()
     {
         instance = this;
@@ -20,6 +21,7 @@ public class FieldInfo : MonoBehaviour
         mortgageButton = transform.GetChild(1).gameObject;
         upgradeFieldButton = transform.GetChild(2).gameObject;
         downgradeFieldButton = transform.GetChild(3).gameObject;
+        text = transform.GetChild(4).gameObject;
     }
 
     [SerializeField] private Sprite graphics;
@@ -36,6 +38,7 @@ public class FieldInfo : MonoBehaviour
             if (owner == GameController.instance.getCurrentPlayer() &&
                 owner.doesPlayerOwnADepartment(couseField))
             {
+                text.SetActive(true);
                 updateButtons(couseField);
             }
             else
@@ -54,7 +57,6 @@ public class FieldInfo : MonoBehaviour
     private void updateInfoAboutCurrentLevel(Course field)
     {
         var currentLevel = field.getCurrentLevel().ToString();
-
         fieldDetail.GetComponentInChildren<Text>().text = "Poziom ulepszeń:" + currentLevel; 
     }
     private void updateButtons(Course field)
@@ -141,6 +143,7 @@ public class FieldInfo : MonoBehaviour
         transform.GetChild(1).gameObject.SetActive(false);
         transform.GetChild(2).gameObject.SetActive(false);
         transform.GetChild(3).gameObject.SetActive(false);
+        text.SetActive(false);
     }
 
     public void onMortgageButtonClick(Buyable field)
