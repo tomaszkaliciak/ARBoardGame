@@ -19,6 +19,11 @@ public class GameController : MonoBehaviour
         players = new List<Player>();
     }
 
+    void Start()
+    {
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
+    }
+
     public void registerNewPlayer(string playerName)
     {
         Debug.LogError("register: " + playerName);

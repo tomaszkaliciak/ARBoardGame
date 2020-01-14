@@ -22,5 +22,8 @@ public abstract class BoardField : MonoBehaviour
 
     public virtual void passThrough(Player player) {}
 
-    public virtual IEnumerator visit(Player player) { return null; }
+    public virtual IEnumerator visit(Player player)
+    {
+        return null;
+    }
 }

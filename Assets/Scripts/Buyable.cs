@@ -69,12 +69,16 @@ public abstract class Buyable : BoardField
                 var outline = transform.GetChild(0);
                 outline.gameObject.GetComponent<MeshRenderer>().sharedMaterial = playerColor;
                 outline.gameObject.SetActive(true);
+                string msg = "Gracz " + player.getName() + " zakupił pole " + courseName + " za " + purchasePrice  + "zł.";
+                yield return Alert.instance.displayAlert(msg, Color.blue); 
             }
         }
         else if (owner && owner != player && !this.mortgage)
         {
-            Debug.Log(player.name + "is not owner");
             int cost = chargeForResit();
+            string msg = "Gracz " + player.getName() + " płaci graczowi " + owner.getName() + " " + cost +
+                         "zł za stanięcie na polu " + courseName; 
+            yield return Alert.instance.displayAlert(msg, Color.red);
             player.updateBalanceBy(-cost);
             owner.updateBalanceBy(cost);
         }
