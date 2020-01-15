@@ -9,6 +9,7 @@ public class PaidParking : BoardField
     public override IEnumerator visit(Player player)
     {
         player.updateBalanceBy(-cost);
-        return null;
+        string msg = "Gracz " + player.getName() + " płaci " + cost + " zł za nielegalne parkowanie pod C1.";
+        yield return Alert.instance.displayAlert(msg, Color.red); 
     }
 }

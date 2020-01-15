@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     private int balance = 2000;
     private string playerName;
 
+    private bool hasPlayerGettingOutOfJailCard = false;
     private static int playerID = 0;
     private BoardField currentPlace;
     private int numberOfRoundsInPrisonLeft = 0;
@@ -16,8 +17,6 @@ public class Player : MonoBehaviour
 
     public void initialize()
     {
-        Debug.LogError("initialize: " + playerName + playerID);
-
         transform.GetComponent<MeshRenderer>().sharedMaterial = colorsOfPieces[playerID];
         currentPlace = StartField.instance;
         playerID++;
@@ -91,7 +90,7 @@ public class Player : MonoBehaviour
         for (int i = 0; i < spaces; i++)
         {
             yield return goToField(currentPlace.nextField);
-            currentPlace.passThrough(this);
+            yield return currentPlace.passThrough(this);
 
             if (currentPlace is StartField || currentPlace is DummyFieldCorner)
             {
@@ -140,5 +139,15 @@ public class Player : MonoBehaviour
     public void getToPrison()
     {
         numberOfRoundsInPrisonLeft = 3;
+    }
+
+    public BoardField getOccupiedField()
+    {
+        return currentPlace;
+    }
+    public bool HasPlayerGettingOutOfJailCard
+    {
+        get => hasPlayerGettingOutOfJailCard;
+        set => hasPlayerGettingOutOfJailCard = value;
     }
 }

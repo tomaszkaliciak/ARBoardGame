@@ -28,31 +28,32 @@ public class GameController : MonoBehaviour
     {
         Debug.LogError("register: " + playerName);
 
+        Player newPlayer = 
+            ((GameObject)(
+                Instantiate(
+                    playerPrefab,
+                    StartField.instance.transform.position,
+                    transform.rotation)))
+            .GetComponent<Player>();
+        
         Vector3 placementOffset = Vector3.zero;
 
         switch (players.Count)
         {
             case 1:
-                placementOffset = new Vector3(.7f, 0, 0);
+                placementOffset = 8 * transform.forward;
                 break;
 
             case 2:
-                placementOffset = new Vector3(-.7f, 0, 0);
+                placementOffset = -8 * transform.forward;
                 break;
 
             case 3:
-                placementOffset = new Vector3(0, 0, -.7f);
+                placementOffset = 8 * transform.right;
                 break;
         }
         
-        Player newPlayer = 
-            ((GameObject)(
-                Instantiate(
-                    playerPrefab,
-                    StartField.instance.transform.position + placementOffset,
-                    transform.rotation)))
-            .GetComponent<Player>();
-
+        newPlayer.transform.localPosition += placementOffset; 
         newPlayer.transform.parent = transform.parent.GetChild(0).transform; 
         newPlayer.setName(playerName);
 
@@ -77,13 +78,18 @@ public class GameController : MonoBehaviour
                 do
                 {
                     yield return PlayerAction.instance.askPlayerForChoice(player);
-                    if (PlayerAction.instance.getChosen() == PlayerAction.Action.GetOutOfPrison)
+                    if (PlayerAction.instance.getChosen() == PlayerAction.Action.PayForGettingOutOfPrison)
                     {
                         player.updateBalanceBy(-50);
                         player.getOutOfJail();
                         yield return PlayerAction.instance.askPlayerForChoice(player);
                     }
-
+                    else if (PlayerAction.instance.getChosen() == PlayerAction.Action.GetOutOfPrisonUsingCard)
+                    {
+                        player.getOutOfJail();
+                        player.HasPlayerGettingOutOfJailCard = false;
+                        yield return PlayerAction.instance.askPlayerForChoice(player); 
+                    }
                     var userChoice = PlayerAction.instance.getChosen();
                     
                     if (userChoice == PlayerAction.Action.RollDice)
@@ -117,5 +123,10 @@ public class GameController : MonoBehaviour
     public Player getCurrentPlayer()
     {
         return currentPlayer;
+    }
+
+    public List<Player> getPlayers()
+    {
+        return players;
     }
 }

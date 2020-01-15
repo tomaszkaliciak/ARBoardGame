@@ -5,9 +5,9 @@ using UnityEngine;
 
 public abstract class BoardField : MonoBehaviour
 {
-    [HideInInspector] public BoardField nextField;
+    public BoardField nextField;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         const int numberOfFields = 40;
         int siblingIndex = transform.GetSiblingIndex();
@@ -20,7 +20,10 @@ public abstract class BoardField : MonoBehaviour
     }
     protected virtual void init() {}
 
-    public virtual void passThrough(Player player) {}
+    public virtual IEnumerator passThrough(Player player)
+    {
+        return null;
+    }
 
     public virtual IEnumerator visit(Player player)
     {

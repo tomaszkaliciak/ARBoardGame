@@ -8,8 +8,11 @@ public class StartField : BoardField
 
     protected override void init() { instance = this; }
 
-    public override void passThrough(Player player)
+    public override IEnumerator passThrough(Player player)
     {
+        string msg = "Gracz " + player.getName() + " otrzymuje 200zł za przetrwanie semestru.";
+        yield return Alert.instance.displayAlert(msg, Color.red); 
         player.updateBalanceBy(200);
+        yield return null;
     }
 }

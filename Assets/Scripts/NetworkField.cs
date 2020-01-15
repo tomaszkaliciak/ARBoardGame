@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class NetworkField : Buyable
 {
-    public override void passThrough(Player player) { }
-
     protected override int chargeForResit()
     {
         return DiceManager.instance.getDieRollResults().Sum() * 2 * getAmountOfNetworksOwnedByOwner();
