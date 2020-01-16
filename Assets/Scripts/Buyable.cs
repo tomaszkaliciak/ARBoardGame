@@ -7,7 +7,7 @@ public abstract class Buyable : BoardField
 {
     protected Player owner;
 
-    private bool mortgage = false;
+    protected bool mortgage = false;
     [SerializeField] private int purchasePrice;
     [SerializeField] private string courseName;
     [SerializeField] public Sprite graphics;
@@ -54,15 +54,21 @@ public abstract class Buyable : BoardField
   
     public override IEnumerator visit(Player player)
     {
-        Debug.Log("visit ");
         if (player.getBalance() > this.purchasePrice && owner == null)
         {
-            yield return PurchaseDialog.instance.OfferPurchase(this);
+            if (player.isPlayerAI())
+            {
+                System.Random rand = new System.Random();
+                PurchaseDialog.instance.playerWantsToBuy = rand.NextDouble() >= 0.75;
+            }
+            else
+            {
+                yield return PurchaseDialog.instance.OfferPurchase(this);
+            }
 
             if (PurchaseDialog.instance.playerWantsToBuy.GetValueOrDefault())
             {
                 player.updateBalanceBy(-purchasePrice);
-                player.ownedFields.Add(this);
                 owner = player;
 
                 var playerColor = player.gameObject.GetComponent<MeshRenderer>().sharedMaterial;
@@ -70,7 +76,7 @@ public abstract class Buyable : BoardField
                 outline.gameObject.GetComponent<MeshRenderer>().sharedMaterial = playerColor;
                 outline.gameObject.SetActive(true);
                 string msg = "Gracz " + player.getName() + " zakupił pole " + courseName + " za " + purchasePrice  + "zł.";
-                yield return Alert.instance.displayAlert(msg, Color.blue); 
+                yield return Alert.instance.displayFormattedAlert(msg, Color.blue); 
             }
         }
         else if (owner && owner != player && !this.mortgage)
@@ -78,7 +84,7 @@ public abstract class Buyable : BoardField
             int cost = chargeForResit();
             string msg = "Gracz " + player.getName() + " płaci graczowi " + owner.getName() + " " + cost +
                          "zł za stanięcie na polu " + courseName; 
-            yield return Alert.instance.displayAlert(msg, Color.red);
+            yield return Alert.instance.displayFormattedAlert(msg, Color.red);
             player.updateBalanceBy(-cost);
             owner.updateBalanceBy(cost);
         }
@@ -110,4 +116,14 @@ public abstract class Buyable : BoardField
     }
 
     protected abstract int chargeForResit();
+
+    public int getPurchasePrice()
+    {
+        return purchasePrice;
+    }
+
+    public string getName()
+    {
+        return courseName;
+    }
 }

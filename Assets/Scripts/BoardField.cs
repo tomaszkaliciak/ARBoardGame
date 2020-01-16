@@ -29,4 +29,9 @@ public abstract class BoardField : MonoBehaviour
     {
         return null;
     }
+
+    public int getIndex()
+    {
+        return transform.GetSiblingIndex();
+    }
 }

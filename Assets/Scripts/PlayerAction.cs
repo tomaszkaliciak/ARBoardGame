@@ -48,12 +48,12 @@ public class PlayerAction : MonoBehaviour
         if (chosenAction == Action.PayForGettingOutOfPrison)
         {
             string msg = "Gracz " + player.getName() + " płaci za wyjście z dziekanki.";
-            yield return Alert.instance.displayAlert(msg, Color.blue); 
+            yield return Alert.instance.displayFormattedAlert(msg, Color.blue); 
         }
         else if (chosenAction == Action.GetOutOfPrisonUsingCard)
         {
             string msg = "Gracz " + player.getName() + " uniknął dziekanki przy użyciu karty specjalnej.";
-            yield return Alert.instance.displayAlert(msg, Color.blue); 
+            yield return Alert.instance.displayFormattedAlert(msg, Color.blue); 
         }
         
         rollButton.SetActive(false);

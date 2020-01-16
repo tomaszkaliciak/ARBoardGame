@@ -22,4 +22,20 @@ public class NetworkField : Buyable
 
         return numberOfNetworksOwnedByOwner;
     }
+
+    public void loadFromNetworkFieldData(NetworkFieldData data)
+    {
+        mortgage = data.mortgage;
+        if (data.ownerID == -1)
+        {
+            return;
+        }
+
+        owner = GameController.instance.getPlayers().Find(s => s.getPlayerID() == data.ownerID);
+        var playerColor = owner.gameObject.GetComponent<MeshRenderer>().sharedMaterial;
+        var outline = transform.GetChild(0);
+        outline.gameObject.GetComponent<MeshRenderer>().sharedMaterial = playerColor;
+        outline.gameObject.SetActive(true);
+        gameObject.transform.GetChild(1).gameObject.SetActive(mortgage);
+    }
 }

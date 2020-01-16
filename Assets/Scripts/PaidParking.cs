@@ -10,6 +10,6 @@ public class PaidParking : BoardField
     {
         player.updateBalanceBy(-cost);
         string msg = "Gracz " + player.getName() + " płaci " + cost + " zł za nielegalne parkowanie pod C1.";
-        yield return Alert.instance.displayAlert(msg, Color.red); 
+        yield return Alert.instance.displayFormattedAlert(msg, Color.red); 
     }
 }

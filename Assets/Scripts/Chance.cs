@@ -67,13 +67,12 @@ public class OwnedCoursesFee : Chance
     public IEnumerator executeRule(Player player)
     {
         int toPay = 0;
-        foreach (var ownedCourse in Array.FindAll(GameObject.FindObjectsOfType<Course>(),
-                                        (course => course.getCurrentOwner() == player)))
+        foreach (var ownedCourse in player.getOwnedCourses())
         {
             toPay += ownedCourse.getCurrentLevel() * 20;
         }
         string msg = "Gracz " + player.getName() + " płaci " + toPay + " zł łapówki za milczenie świadków.";
-        yield return Alert.instance.displayAlert(msg, Color.red); 
+        yield return Alert.instance.displayFormattedAlert(msg, Color.red); 
         player.updateBalanceBy(-toPay);
         yield return null;       
     }
@@ -89,17 +88,7 @@ public class GoToFreeParking : Chance
     public IEnumerator executeRule(Player player)
     {
         var freeParkingField = GameObject.FindObjectOfType<DummyFieldCorner>();
-        var indexOfCurrentField = player.getOccupiedField().transform.GetSiblingIndex();
-        
-        var indexOfFreeParkingField = freeParkingField.transform.GetSiblingIndex();
-        yield return player.goToField(freeParkingField);
-        
-        if (indexOfCurrentField > indexOfFreeParkingField)
-        {
-            player.updateBalanceBy(200);
-        }
-
-        yield return null;
+        yield return player.moveForwardTo(freeParkingField);
     }
 }
 
@@ -113,8 +102,7 @@ public class GoToStart : Chance
     public IEnumerator executeRule(Player player)
     {
         var startField = GameObject.FindObjectOfType<StartField>();
-        yield return player.goToField(startField);
-        yield return startField.passThrough(player); 
+        yield return player.moveForwardTo(startField);
     }
 }
 public class GoBackToStart : Chance
@@ -127,7 +115,7 @@ public class GoBackToStart : Chance
     public IEnumerator executeRule(Player player)
     {
         var startField = GameObject.FindObjectOfType<StartField>();
-        yield return player.goToField(startField);
+        yield return player.moveBackwardTo(startField);
     }
 }
 

@@ -3,22 +3,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable] 
 public class Player : MonoBehaviour
 {
     private int balance = 2000;
     private string playerName;
-
-    private bool hasPlayerGettingOutOfJailCard = false;
+    private int ID;
     private static int playerID = 0;
     private BoardField currentPlace;
     private int numberOfRoundsInPrisonLeft = 0;
+    private bool isAI = false;
     [SerializeField] private Material[] colorsOfPieces;
-    public List<Buyable> ownedFields = new List<Buyable>();
 
     public void initialize()
     {
         transform.GetComponent<MeshRenderer>().sharedMaterial = colorsOfPieces[playerID];
         currentPlace = StartField.instance;
+        ID = playerID;
         playerID++;
     }
 
@@ -80,8 +81,7 @@ public class Player : MonoBehaviour
         currentPlace = field;
         transform.localPosition = currentPlace.transform.localPosition;
     }
-
-
+    
     public IEnumerator takeSteps(int spaces)
     {   
         bool movingForward = spaces > 0;
@@ -100,6 +100,38 @@ public class Player : MonoBehaviour
         yield return currentPlace.visit(this);
     }
 
+    public IEnumerator moveForwardTo(BoardField destination)
+    {
+        while (currentPlace != destination)
+        {
+            yield return goToField(currentPlace.nextField);
+            yield return currentPlace.passThrough(this);
+
+            if (currentPlace is StartField || currentPlace is DummyFieldCorner)
+            {
+                yield return rotate(90);
+            }
+        }
+        yield return null;
+
+    }
+
+    public IEnumerator moveBackwardTo(BoardField destination)
+    {
+        while (currentPlace != destination)
+        {
+            var previousField = Array.Find(GameObject.FindObjectsOfType<BoardField>(),(field => field.nextField == currentPlace));
+            yield return goToField(previousField);
+
+            if (currentPlace is StartField || currentPlace is DummyFieldCorner)
+            {
+                yield return rotate(-90);
+            }
+        }
+
+        yield return null;
+    }
+    
     public bool doesPlayerOwnADepartment(Course course)
     {
         uint numberOfCoursesFromTheSameDepartment = 0;
@@ -145,9 +177,72 @@ public class Player : MonoBehaviour
     {
         return currentPlace;
     }
-    public bool HasPlayerGettingOutOfJailCard
+    public bool HasPlayerGettingOutOfJailCard { get; set; } = false;
+
+    public Course[] getOwnedCourses()
     {
-        get => hasPlayerGettingOutOfJailCard;
-        set => hasPlayerGettingOutOfJailCard = value;
+        return Array.FindAll(GameObject.FindObjectsOfType<Course>(), (course => course.getCurrentOwner() == this));
+    }
+
+    public Buyable[] getOwnedFields()
+    {
+        return Array.FindAll(GameObject.FindObjectsOfType<Buyable>(), (course => course.getCurrentOwner() == this));
+    }
+    public int getPlayerAssets()
+    {
+        int assets = balance;
+
+        foreach (var ownedField in getOwnedFields())
+        {
+            var purchasePrice = ownedField.getPurchasePrice();
+            
+            if (ownedField.isPledged())
+            {
+                assets += purchasePrice / 2;
+            }
+            else
+            {
+                assets += purchasePrice;
+                if (ownedField is Course)
+                {
+                    Course ownedCourse = (Course)ownedField;
+                    assets += ownedCourse.getCurrentLevel() * ownedCourse.getUpgradeCost();
+                }
+            }
+        } 
+        
+        return assets;
+    }
+
+    public int getPlayerID()
+    {
+        return ID;
+    }
+
+    public int getNumberOfRoundsInPrisonLeft()
+    {
+        return numberOfRoundsInPrisonLeft;
+    }
+
+    public void loadFromPlayerData(PlayerData data)
+    {
+        balance = data.balance;
+        playerName = data.playerName;
+        ID = data.playerID;
+        transform.GetComponent<MeshRenderer>().sharedMaterial = colorsOfPieces[ID];
+        currentPlace = StartField.instance.transform.parent.GetChild(data.sibilingIndexOfCurrentPlace).gameObject.GetComponent<BoardField>();
+        numberOfRoundsInPrisonLeft = data.numberOfRoundsInPrisonLeft;
+        transform.localPosition = currentPlace.transform.localPosition;
+        isAI = data.isAI;
+    }
+
+    public bool isPlayerAI()
+    {
+        return isAI;
+    }
+
+    public void setAIRole()
+    {
+        isAI = true;
     }
 }

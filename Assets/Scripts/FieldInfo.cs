@@ -41,10 +41,6 @@ public class FieldInfo : MonoBehaviour
                 text.SetActive(true);
                 updateButtons(couseField);
             }
-            else
-            {
-                updateInfoAboutCurrentLevel(couseField);
-            }
         }
         else
         {
@@ -53,12 +49,7 @@ public class FieldInfo : MonoBehaviour
         displayMortageButton(field);
         panel.SetActive(true);
     }
-
-    private void updateInfoAboutCurrentLevel(Course field)
-    {
-        var currentLevel = field.getCurrentLevel().ToString();
-        fieldDetail.GetComponentInChildren<Text>().text = "Poziom ulepszeń:" + currentLevel; 
-    }
+    
     private void updateButtons(Course field)
     {
         var currentLevel = field.getCurrentLevel();
@@ -79,8 +70,6 @@ public class FieldInfo : MonoBehaviour
         {
             upgradeFieldButton.SetActive(false);
         }
-
-        updateInfoAboutCurrentLevel(field);
     }
     private void displayUpgradeFieldButton(Course field)
     {
