@@ -8,7 +8,6 @@ public class Player : MonoBehaviour
     private int balance = 2000;
     private string playerName;
 
-    private bool hasPlayerGettingOutOfJailCard = false;
     private static int playerID = 0;
     private BoardField currentPlace;
     private int numberOfRoundsInPrisonLeft = 0;
@@ -145,9 +144,40 @@ public class Player : MonoBehaviour
     {
         return currentPlace;
     }
-    public bool HasPlayerGettingOutOfJailCard
+    public bool HasPlayerGettingOutOfJailCard { get; set; } = false;
+
+    public Course[] getOwnedCourses()
     {
-        get => hasPlayerGettingOutOfJailCard;
-        set => hasPlayerGettingOutOfJailCard = value;
+        return Array.FindAll(GameObject.FindObjectsOfType<Course>(), (course => course.getCurrentOwner() == this));
+    }
+
+    public Buyable[] getOwnedFields()
+    {
+        return Array.FindAll(GameObject.FindObjectsOfType<Buyable>(), (course => course.getCurrentOwner() == this));
+    }
+    public int getPlayerAssets()
+    {
+        int assets = balance;
+
+        foreach (var ownedField in getOwnedFields())
+        {
+            var purchasePrice = ownedField.getPurchasePrice();
+            
+            if (ownedField.isPledged())
+            {
+                assets += purchasePrice / 2;
+            }
+            else
+            {
+                assets += purchasePrice;
+                if (ownedField is Course)
+                {
+                    Course ownedCourse = (Course)ownedField;
+                    assets += ownedCourse.getCurrentLevel() * ownedCourse.getUpgradeCost();
+                }
+            }
+        } 
+        
+        return assets;
     }
 }

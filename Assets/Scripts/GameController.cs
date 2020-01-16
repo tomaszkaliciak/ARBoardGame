@@ -2,7 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.UNetWeaver;
 using UnityEngine;
+using Vuforia;
 
 public class GameController : MonoBehaviour
 {
@@ -22,6 +24,7 @@ public class GameController : MonoBehaviour
     void Start()
     {
         Screen.orientation = ScreenOrientation.LandscapeLeft;
+        VuforiaBehaviour.Instance.enabled = false;
     }
 
     public void registerNewPlayer(string playerName)
@@ -68,6 +71,7 @@ public class GameController : MonoBehaviour
     }
     private IEnumerator playGame()
     {
+        VuforiaBehaviour.Instance.enabled = true;
         while (true)
         {
             foreach (var player in players)
@@ -97,7 +101,7 @@ public class GameController : MonoBehaviour
                         yield return DiceManager.instance.rollDie();
                         dieRollResults = DiceManager.instance.getDieRollResults();
                         Debug.Log("Got " + dieRollResults.Sum());
-
+                        
                         if (player.isInPrison())
                         {
                             if (dieRollResults.Length != dieRollResults.Distinct().Count())
@@ -128,5 +132,51 @@ public class GameController : MonoBehaviour
     public List<Player> getPlayers()
     {
         return players;
+    }
+
+    private List<Player> getPlayersOrderedByAssets()
+    {
+        return players.OrderBy(player => player.getPlayerAssets()).Reverse().ToList();
+    }
+    private string prepareFormattedScoreboard()
+    {
+        var rankingOfPlayers = getPlayersOrderedByAssets();
+        string message = "";
+       
+        // I want it to be nicely formatted, so every line will have exactly 26 characters
+        int numberOfCharacterInOneRow = 27;
+        int currentPosition = 0;
+        int previousBestScore = 0;
+        int numberOfCharactersNeededForDisplayingPosition = 3;
+        int numberOfCharactersNeededForUnitAndNewLine = 4;
+        
+        for (int i = 0; i < rankingOfPlayers.Count; i++)
+        {
+            var player = rankingOfPlayers[i];
+            var score = player.getPlayerAssets();
+            
+            if (score != previousBestScore)
+            {
+                previousBestScore = score;
+                ++currentPosition;
+            }
+            
+            int numberOfSpacesNeeded = numberOfCharacterInOneRow
+                                       - player.getName().Length
+                                       - numberOfCharactersNeededForDisplayingPosition
+                                       - score.ToString().Length
+                                       - numberOfCharactersNeededForUnitAndNewLine;
+            
+            string alignment = numberOfSpacesNeeded != 0 ? new String(' ', numberOfSpacesNeeded) : "";
+            string row = currentPosition + ". " + player.getName() + alignment + score + "zł\n";
+            
+            message += row;
+        }
+
+        return message;
+    }
+    public IEnumerator showScoreboard()
+    {
+        yield return Alert.instance.displayAlert(prepareFormattedScoreboard(), Color.blue);
     }
 }

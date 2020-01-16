@@ -70,7 +70,7 @@ public abstract class Buyable : BoardField
                 outline.gameObject.GetComponent<MeshRenderer>().sharedMaterial = playerColor;
                 outline.gameObject.SetActive(true);
                 string msg = "Gracz " + player.getName() + " zakupił pole " + courseName + " za " + purchasePrice  + "zł.";
-                yield return Alert.instance.displayAlert(msg, Color.blue); 
+                yield return Alert.instance.displayFormattedAlert(msg, Color.blue); 
             }
         }
         else if (owner && owner != player && !this.mortgage)
@@ -78,7 +78,7 @@ public abstract class Buyable : BoardField
             int cost = chargeForResit();
             string msg = "Gracz " + player.getName() + " płaci graczowi " + owner.getName() + " " + cost +
                          "zł za stanięcie na polu " + courseName; 
-            yield return Alert.instance.displayAlert(msg, Color.red);
+            yield return Alert.instance.displayFormattedAlert(msg, Color.red);
             player.updateBalanceBy(-cost);
             owner.updateBalanceBy(cost);
         }
@@ -110,4 +110,10 @@ public abstract class Buyable : BoardField
     }
 
     protected abstract int chargeForResit();
+
+    public int getPurchasePrice()
+    {
+        return purchasePrice;
+    }
+    
 }

@@ -11,7 +11,7 @@ public class StartField : BoardField
     public override IEnumerator passThrough(Player player)
     {
         string msg = "Gracz " + player.getName() + " otrzymuje 200zł za przetrwanie semestru.";
-        yield return Alert.instance.displayAlert(msg, Color.red); 
+        yield return Alert.instance.displayFormattedAlert(msg, Color.red); 
         player.updateBalanceBy(200);
         yield return null;
     }

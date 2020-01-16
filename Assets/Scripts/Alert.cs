@@ -21,7 +21,7 @@ public class Alert : MonoBehaviour
 
     public IEnumerator displayAlert(string alert, Color colorOfButton)
     {
-        message.text = splitTextToNCharacters(alert, 26);
+        message.text = alert;
         button.gameObject.GetComponent<Image>().color = colorOfButton;
         
         alertWindow.SetActive(true);
@@ -32,7 +32,12 @@ public class Alert : MonoBehaviour
         }
         
         alertWindow.SetActive(false);
-        doesPlayerPressButton = false;
+        doesPlayerPressButton = false; 
+    }
+
+    public IEnumerator displayFormattedAlert(string alert, Color colorOfButton)
+    {
+        yield return displayAlert(splitTextToNCharacters(alert, 26), colorOfButton);
     }
 
     private string splitTextToNCharacters(string text, int n)

@@ -12,7 +12,6 @@ public class ChanceViewer : MonoBehaviour
     }
 
     [SerializeField] private Image image;
-    [SerializeField] private Button button;
     private GameObject window;
     private bool doesPlayerPressButton = false;
 

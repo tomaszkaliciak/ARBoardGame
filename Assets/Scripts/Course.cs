@@ -19,6 +19,10 @@ public class Course : Buyable
 
     protected override int chargeForResit()
     {
+        if (currentLevel == 0 && owner && owner.doesPlayerOwnADepartment(this))
+        {
+            return resitPrices[0] * 2;
+        }
         return resitPrices[currentLevel];
     }
     public int getCurrentLevel()

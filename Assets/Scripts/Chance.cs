@@ -67,13 +67,12 @@ public class OwnedCoursesFee : Chance
     public IEnumerator executeRule(Player player)
     {
         int toPay = 0;
-        foreach (var ownedCourse in Array.FindAll(GameObject.FindObjectsOfType<Course>(),
-                                        (course => course.getCurrentOwner() == player)))
+        foreach (var ownedCourse in player.getOwnedCourses())
         {
             toPay += ownedCourse.getCurrentLevel() * 20;
         }
         string msg = "Gracz " + player.getName() + " płaci " + toPay + " zł łapówki za milczenie świadków.";
-        yield return Alert.instance.displayAlert(msg, Color.red); 
+        yield return Alert.instance.displayFormattedAlert(msg, Color.red); 
         player.updateBalanceBy(-toPay);
         yield return null;       
     }
