@@ -10,7 +10,7 @@ public class PlayerData
     public int playerID;
     public int sibilingIndexOfCurrentPlace;
     public int numberOfRoundsInPrisonLeft;
-
+    public bool isAI;
     public PlayerData(Player player)
     {
         balance = player.getBalance();
@@ -18,5 +18,6 @@ public class PlayerData
         playerID = player.getPlayerID();
         sibilingIndexOfCurrentPlace = player.getOccupiedField().getIndex();
         numberOfRoundsInPrisonLeft = player.getNumberOfRoundsInPrisonLeft();
+        isAI = player.isPlayerAI();
     }
 }

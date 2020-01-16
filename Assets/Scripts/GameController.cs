@@ -26,7 +26,7 @@ public class GameController : MonoBehaviour
         Screen.orientation = ScreenOrientation.LandscapeLeft;
     }
 
-    public void registerNewPlayer(string playerName)
+    public void registerNewPlayer(string playerName, bool isAI=false)
     {
         Debug.LogError("register: " + playerName);
 
@@ -58,7 +58,10 @@ public class GameController : MonoBehaviour
         newPlayer.transform.localPosition += placementOffset; 
         newPlayer.transform.parent = transform.parent.GetChild(0).transform; 
         newPlayer.setName(playerName);
-
+        if (isAI)
+        {
+            newPlayer.setAIRole();
+        }
         players.Add(newPlayer);
         newPlayer.initialize();
     }
@@ -81,27 +84,35 @@ public class GameController : MonoBehaviour
                 int[] dieRollResults = new int[2];
                 do
                 {
-                    yield return PlayerAction.instance.askPlayerForChoice(player);
-                    if (PlayerAction.instance.getChosen() == PlayerAction.Action.PayForGettingOutOfPrison)
+                    var userChoice = PlayerAction.Action.NotSet;
+                    if (!player.isPlayerAI())
                     {
-                        player.updateBalanceBy(-50);
-                        player.getOutOfJail();
                         yield return PlayerAction.instance.askPlayerForChoice(player);
+                        if (PlayerAction.instance.getChosen() == PlayerAction.Action.PayForGettingOutOfPrison)
+                        {
+                            player.updateBalanceBy(-50);
+                            player.getOutOfJail();
+                            yield return PlayerAction.instance.askPlayerForChoice(player);
+                        }
+                        else if (PlayerAction.instance.getChosen() == PlayerAction.Action.GetOutOfPrisonUsingCard)
+                        {
+                            player.getOutOfJail();
+                            player.HasPlayerGettingOutOfJailCard = false;
+                            yield return PlayerAction.instance.askPlayerForChoice(player);
+                        }
+                        userChoice = PlayerAction.instance.getChosen();
                     }
-                    else if (PlayerAction.instance.getChosen() == PlayerAction.Action.GetOutOfPrisonUsingCard)
+                    else
                     {
-                        player.getOutOfJail();
-                        player.HasPlayerGettingOutOfJailCard = false;
-                        yield return PlayerAction.instance.askPlayerForChoice(player); 
+                        userChoice = PlayerAction.Action.RollDice;
                     }
-                    var userChoice = PlayerAction.instance.getChosen();
-                    
+
                     if (userChoice == PlayerAction.Action.RollDice)
                     {
                         yield return DiceManager.instance.rollDie();
                         dieRollResults = DiceManager.instance.getDieRollResults();
                         Debug.Log("Got " + dieRollResults.Sum());
-                        
+
                         if (player.isInPrison())
                         {
                             if (dieRollResults.Length != dieRollResults.Distinct().Count())

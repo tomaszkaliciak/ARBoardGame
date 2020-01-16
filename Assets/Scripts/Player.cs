@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     private static int playerID = 0;
     private BoardField currentPlace;
     private int numberOfRoundsInPrisonLeft = 0;
+    private bool isAI = false;
     [SerializeField] private Material[] colorsOfPieces;
 
     public void initialize()
@@ -80,8 +81,7 @@ public class Player : MonoBehaviour
         currentPlace = field;
         transform.localPosition = currentPlace.transform.localPosition;
     }
-
-
+    
     public IEnumerator takeSteps(int spaces)
     {   
         bool movingForward = spaces > 0;
@@ -100,6 +100,38 @@ public class Player : MonoBehaviour
         yield return currentPlace.visit(this);
     }
 
+    public IEnumerator moveForwardTo(BoardField destination)
+    {
+        while (currentPlace != destination)
+        {
+            yield return goToField(currentPlace.nextField);
+            yield return currentPlace.passThrough(this);
+
+            if (currentPlace is StartField || currentPlace is DummyFieldCorner)
+            {
+                yield return rotate(90);
+            }
+        }
+        yield return null;
+
+    }
+
+    public IEnumerator moveBackwardTo(BoardField destination)
+    {
+        while (currentPlace != destination)
+        {
+            var previousField = Array.Find(GameObject.FindObjectsOfType<BoardField>(),(field => field.nextField == currentPlace));
+            yield return goToField(previousField);
+
+            if (currentPlace is StartField || currentPlace is DummyFieldCorner)
+            {
+                yield return rotate(-90);
+            }
+        }
+
+        yield return null;
+    }
+    
     public bool doesPlayerOwnADepartment(Course course)
     {
         uint numberOfCoursesFromTheSameDepartment = 0;
@@ -201,5 +233,16 @@ public class Player : MonoBehaviour
         currentPlace = StartField.instance.transform.parent.GetChild(data.sibilingIndexOfCurrentPlace).gameObject.GetComponent<BoardField>();
         numberOfRoundsInPrisonLeft = data.numberOfRoundsInPrisonLeft;
         transform.localPosition = currentPlace.transform.localPosition;
+        isAI = data.isAI;
+    }
+
+    public bool isPlayerAI()
+    {
+        return isAI;
+    }
+
+    public void setAIRole()
+    {
+        isAI = true;
     }
 }

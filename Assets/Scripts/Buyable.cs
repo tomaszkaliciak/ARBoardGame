@@ -54,10 +54,17 @@ public abstract class Buyable : BoardField
   
     public override IEnumerator visit(Player player)
     {
-        Debug.Log("visit ");
         if (player.getBalance() > this.purchasePrice && owner == null)
         {
-            yield return PurchaseDialog.instance.OfferPurchase(this);
+            if (player.isPlayerAI())
+            {
+                System.Random rand = new System.Random();
+                PurchaseDialog.instance.playerWantsToBuy = rand.NextDouble() >= 0.75;
+            }
+            else
+            {
+                yield return PurchaseDialog.instance.OfferPurchase(this);
+            }
 
             if (PurchaseDialog.instance.playerWantsToBuy.GetValueOrDefault())
             {

@@ -9,6 +9,7 @@ public class Menu : MonoBehaviour
 {   
     [SerializeField] private InputField[] playerPanels = new InputField[4];
     [SerializeField] private GameObject thirdPlayerCreator, fourthPlayerCreator;
+    [SerializeField] private Toggle[] toggles = new Toggle[4];
 
     private void Start()
     {
@@ -36,7 +37,7 @@ public class Menu : MonoBehaviour
                 continue;
             }
             
-            GameController.instance.registerNewPlayer(getPlayerName(i, playerPanels[i]));
+            GameController.instance.registerNewPlayer(getPlayerName(i, playerPanels[i]), toggles[i].isOn);
         }
 
         GameController.instance.startGame();

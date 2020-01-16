@@ -88,17 +88,7 @@ public class GoToFreeParking : Chance
     public IEnumerator executeRule(Player player)
     {
         var freeParkingField = GameObject.FindObjectOfType<DummyFieldCorner>();
-        var indexOfCurrentField = player.getOccupiedField().transform.GetSiblingIndex();
-        
-        var indexOfFreeParkingField = freeParkingField.transform.GetSiblingIndex();
-        yield return player.goToField(freeParkingField);
-        
-        if (indexOfCurrentField > indexOfFreeParkingField)
-        {
-            player.updateBalanceBy(200);
-        }
-
-        yield return null;
+        yield return player.moveForwardTo(freeParkingField);
     }
 }
 
@@ -112,8 +102,7 @@ public class GoToStart : Chance
     public IEnumerator executeRule(Player player)
     {
         var startField = GameObject.FindObjectOfType<StartField>();
-        yield return player.goToField(startField);
-        yield return startField.passThrough(player); 
+        yield return player.moveForwardTo(startField);
     }
 }
 public class GoBackToStart : Chance
@@ -126,7 +115,7 @@ public class GoBackToStart : Chance
     public IEnumerator executeRule(Player player)
     {
         var startField = GameObject.FindObjectOfType<StartField>();
-        yield return player.goToField(startField);
+        yield return player.moveBackwardTo(startField);
     }
 }
 
