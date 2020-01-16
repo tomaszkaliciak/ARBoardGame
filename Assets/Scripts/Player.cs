@@ -3,21 +3,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable] 
 public class Player : MonoBehaviour
 {
     private int balance = 2000;
     private string playerName;
-
+    private int ID;
     private static int playerID = 0;
     private BoardField currentPlace;
     private int numberOfRoundsInPrisonLeft = 0;
     [SerializeField] private Material[] colorsOfPieces;
-    public List<Buyable> ownedFields = new List<Buyable>();
 
     public void initialize()
     {
         transform.GetComponent<MeshRenderer>().sharedMaterial = colorsOfPieces[playerID];
         currentPlace = StartField.instance;
+        ID = playerID;
         playerID++;
     }
 
@@ -179,5 +180,26 @@ public class Player : MonoBehaviour
         } 
         
         return assets;
+    }
+
+    public int getPlayerID()
+    {
+        return ID;
+    }
+
+    public int getNumberOfRoundsInPrisonLeft()
+    {
+        return numberOfRoundsInPrisonLeft;
+    }
+
+    public void loadFromPlayerData(PlayerData data)
+    {
+        balance = data.balance;
+        playerName = data.playerName;
+        ID = data.playerID;
+        transform.GetComponent<MeshRenderer>().sharedMaterial = colorsOfPieces[ID];
+        currentPlace = StartField.instance.transform.parent.GetChild(data.sibilingIndexOfCurrentPlace).gameObject.GetComponent<BoardField>();
+        numberOfRoundsInPrisonLeft = data.numberOfRoundsInPrisonLeft;
+        transform.localPosition = currentPlace.transform.localPosition;
     }
 }

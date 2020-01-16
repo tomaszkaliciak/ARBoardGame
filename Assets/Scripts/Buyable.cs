@@ -7,7 +7,7 @@ public abstract class Buyable : BoardField
 {
     protected Player owner;
 
-    private bool mortgage = false;
+    protected bool mortgage = false;
     [SerializeField] private int purchasePrice;
     [SerializeField] private string courseName;
     [SerializeField] public Sprite graphics;
@@ -62,7 +62,6 @@ public abstract class Buyable : BoardField
             if (PurchaseDialog.instance.playerWantsToBuy.GetValueOrDefault())
             {
                 player.updateBalanceBy(-purchasePrice);
-                player.ownedFields.Add(this);
                 owner = player;
 
                 var playerColor = player.gameObject.GetComponent<MeshRenderer>().sharedMaterial;
@@ -115,5 +114,9 @@ public abstract class Buyable : BoardField
     {
         return purchasePrice;
     }
-    
+
+    public string getName()
+    {
+        return courseName;
+    }
 }

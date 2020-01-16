@@ -24,7 +24,6 @@ public class GameController : MonoBehaviour
     void Start()
     {
         Screen.orientation = ScreenOrientation.LandscapeLeft;
-        VuforiaBehaviour.Instance.enabled = false;
     }
 
     public void registerNewPlayer(string playerName)
@@ -71,6 +70,7 @@ public class GameController : MonoBehaviour
     }
     private IEnumerator playGame()
     {
+        VuforiaRuntime.Instance.InitVuforia();
         VuforiaBehaviour.Instance.enabled = true;
         while (true)
         {
@@ -178,5 +178,29 @@ public class GameController : MonoBehaviour
     public IEnumerator showScoreboard()
     {
         yield return Alert.instance.displayAlert(prepareFormattedScoreboard(), Color.blue);
+    }
+
+    public void loadPlayer(PlayerData data)
+    {
+        var player = players[data.playerID];
+        player.loadFromPlayerData(data);
+    }
+
+    public void loadField(TrainFieldData data)
+    {
+        var field = Array.Find(GameObject.FindObjectsOfType<TrainField>(),s => s.getName() == data.courseName);
+        field.loadFromTrainFieldData(data);
+    }
+    
+    public void loadField(NetworkFieldData data)
+    {
+        var field = Array.Find(GameObject.FindObjectsOfType<NetworkField>(),s => s.getName() == data.courseName);
+        field.loadFromNetworkFieldData(data);
+    }
+    
+    public void loadField(CourseData data)
+    {
+        var field = Array.Find(GameObject.FindObjectsOfType<Course>(),s => s.getName() == data.courseName);
+        field.loadFromCourseData(data);
     }
 }

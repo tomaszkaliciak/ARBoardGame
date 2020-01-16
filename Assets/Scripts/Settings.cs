@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Settings : MonoBehaviour
@@ -13,25 +15,6 @@ public class Settings : MonoBehaviour
         instance = this;
         window = transform.GetChild(0).gameObject;
     }
-
-    public IEnumerator display(Sprite chanceImage)
-    {
-        return null;
-        /*
-        image.gameObject.GetComponent<Image>().sprite = chanceImage;      
-        
-        window.SetActive(true);
-
-        while (!doesPlayerPressButton)
-        {
-            yield return null;
-        }
-
-        window.SetActive(false);
-        doesPlayerPressButton = false;
-        */
-    }
-
     public void onSettingsButtonClick()
     {
         window.SetActive(true);
@@ -39,6 +22,10 @@ public class Settings : MonoBehaviour
 
     public void onSaveButtonClick()
     {
+        GameSaver.save(GameController.instance.getPlayers());
+        GameSaver.save(GameObject.FindObjectsOfType<Course>().ToList());
+        GameSaver.save(GameObject.FindObjectsOfType<NetworkField>().ToList());
+        GameSaver.save(GameObject.FindObjectsOfType<TrainField>().ToList());
     }
 
     public void onSummaryButtonClick()
