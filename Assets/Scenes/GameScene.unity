@@ -2629,8 +2629,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
   purchasePrice: 200
-  courseName: sdgsg323
-  graphics: {fileID: 0}
+  courseName: transport szynowy
+  graphics: {fileID: 21300000, guid: 1b7df0756fa83dc4b8e3f3a50157443f, type: 3}
 --- !u!1001 &153972234
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4834,8 +4834,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
   purchasePrice: 100
-  courseName: sdfsfewgeg
-  graphics: {fileID: 0}
+  courseName: straz politechniki
+  graphics: {fileID: 21300000, guid: 0cc68ce3783ff074ab852134cca85777, type: 3}
 --- !u!1 &275362682
 GameObject:
   m_ObjectHideFlags: 0
@@ -8652,8 +8652,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
   purchasePrice: 200
-  courseName: afs3ff
-  graphics: {fileID: 0}
+  courseName: polinka
+  graphics: {fileID: 21300000, guid: 2e9473f6da737f74ca502345164c4679, type: 3}
 --- !u!1 &522508192
 GameObject:
   m_ObjectHideFlags: 0
@@ -14127,8 +14127,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
   purchasePrice: 100
-  courseName: egdfgfdg
-  graphics: {fileID: 0}
+  courseName: Jedzenie na kampusie
+  graphics: {fileID: 21300000, guid: f7003fdcd7b540941af495057de1808b, type: 3}
 --- !u!1001 &967291689
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19980,8 +19980,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
   purchasePrice: 200
-  courseName: aa
-  graphics: {fileID: 0}
+  courseName: Transport autobusowy
+  graphics: {fileID: 21300000, guid: c61f2aa6e22de304fafe23ea25a883a7, type: 3}
 --- !u!1001 &1466669273
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24566,8 +24566,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
   purchasePrice: 200
-  courseName: sffg33
-  graphics: {fileID: 0}
+  courseName: parkinki na kampusie
+  graphics: {fileID: 21300000, guid: 5c7b1955d0f533c4a904427bca2818a1, type: 3}
 --- !u!1 &1722285863
 GameObject:
   m_ObjectHideFlags: 0
