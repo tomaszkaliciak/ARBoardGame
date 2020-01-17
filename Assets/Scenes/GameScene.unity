@@ -1412,12 +1412,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  purchasePrice: 2
-  courseName: dsfsfwdf
-  graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  purchasePrice: 350
+  courseName: metody glebokiego uczenia
+  graphics: {fileID: 21300000, guid: e14d0128031068c47ad5617979124084, type: 3}
   department: 7
-  housePrice: 33
-  resitPrices: 2d0000006f000000de0000004d010000bc0100002b020000
+  housePrice: 200
+  resitPrices: 23000000af000000f40100004c04000014050000dc050000
 --- !u!1 &86020602
 GameObject:
   m_ObjectHideFlags: 0
@@ -2895,12 +2895,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  purchasePrice: 23
-  courseName: fsf3sff
-  graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  purchasePrice: 260
+  courseName: architektura komputerow2
+  graphics: {fileID: 21300000, guid: 3b206efd5f81a9648a3eb935d52f90e1, type: 3}
   department: 5
-  housePrice: 22
-  resitPrices: 050000006f000000de0000004d010000bc0100002b020000
+  housePrice: 150
+  resitPrices: 160000006e0000004a01000020030000cf0300007e040000
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -4309,12 +4309,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  purchasePrice: 10
-  courseName: gfderer
-  graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  purchasePrice: 140
+  courseName: algebra
+  graphics: {fileID: 21300000, guid: 33948b9384df28e438080732e215d4e0, type: 3}
   department: 2
-  housePrice: 133
-  resitPrices: 3200000096000000fa0000005e010000c201000026020000
+  housePrice: 100
+  resitPrices: 0a0000003200000096000000c201000071020000ee020000
 --- !u!1 &256853660
 GameObject:
   m_ObjectHideFlags: 0
@@ -4532,12 +4532,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  purchasePrice: 10
-  courseName: aaa
-  graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  purchasePrice: 60
+  courseName: etyka inzynierska
+  graphics: {fileID: 21300000, guid: 9460cdfafb7731445bb13801876c16cc, type: 3}
   department: 0
-  housePrice: 20
-  resitPrices: 1400000078000000dc00000040010000a401000008020000
+  housePrice: 50
+  resitPrices: 020000000a0000001e0000005a000000a0000000fa000000
 --- !u!1 &261314618
 GameObject:
   m_ObjectHideFlags: 0
@@ -5039,12 +5039,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  purchasePrice: 3232
-  courseName: zsfdsf3
-  graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  purchasePrice: 300
+  courseName: cyfrowe przetwarzanie obrazow
+  graphics: {fileID: 21300000, guid: 6fb1ac8bf9b8aac4f91d448d3686302b, type: 3}
   department: 6
-  housePrice: 23
-  resitPrices: 0c0000006f000000de0000004d010000bc0100002b020000
+  housePrice: 200
+  resitPrices: 1a0000008200000086010000840300006e000000fb040000
 --- !u!1 &290352962
 GameObject:
   m_ObjectHideFlags: 0
@@ -5489,12 +5489,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  purchasePrice: 101
-  courseName: fhdfgerwwewe
-  graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  purchasePrice: 140
+  courseName: analiza1
+  graphics: {fileID: 21300000, guid: 963d4cbd3d2bdb64893f15dd35af16c7, type: 3}
   department: 2
-  housePrice: 13
-  resitPrices: 64000000c80000002c01000090010000f401000058020000
+  housePrice: 100
+  resitPrices: 0a0000003200000096000000c201000071020000ee020000
 --- !u!1001 &300909791
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7713,12 +7713,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  purchasePrice: 11
-  courseName: sdfsdfs3tg
-  graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  purchasePrice: 400
+  courseName: AR/VR
+  graphics: {fileID: 21300000, guid: 4bb2b1ac4fde0c04bb4f39bd84976b89, type: 3}
   department: 7
-  housePrice: 44
-  resitPrices: 6f000000de0000004d010000bc0100002b0200009a020000
+  housePrice: 200
+  resitPrices: 32000000c80000005802000078050000a4060000d0070000
 --- !u!1001 &437504497
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8457,12 +8457,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  purchasePrice: 22
-  courseName: asfd3es
-  graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  purchasePrice: 260
+  courseName: architektura komputerow1
+  graphics: {fileID: 21300000, guid: c8537450aae995e4ea0aaac91f9b15bc, type: 3}
   department: 5
-  housePrice: 33
-  resitPrices: 280000006f000000de0000004d010000bc0100002b020000
+  housePrice: 150
+  resitPrices: 160000006e0000004a01000020030000cf0300007e040000
 --- !u!1001 &490174347
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12446,12 +12446,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  purchasePrice: 32
-  courseName: 43
-  graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  purchasePrice: 160
+  courseName: analiza2
+  graphics: {fileID: 21300000, guid: cdf4c034dc358364cacfb10046006c27, type: 3}
   department: 2
-  housePrice: 23
-  resitPrices: 6e000000d2000000360100009a010000fe01000062020000
+  housePrice: 100
+  resitPrices: 0c0000003c000000b4000000f4010000bc02000084030000
 --- !u!1001 &861111736
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15492,12 +15492,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  purchasePrice: 10
-  courseName: 423t3vdssd
-  graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  purchasePrice: 180
+  courseName: programowanie obiektowe
+  graphics: {fileID: 21300000, guid: 96caf827e10223c4ea52ae4bd7395bd4, type: 3}
   department: 3
-  housePrice: 234
-  resitPrices: 3200000096000000de0000004d010000bc0100002b020000
+  housePrice: 100
+  resitPrices: 0e00000046000000c800000026020000ee020000b6030000
 --- !u!1001 &1083733265
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17258,12 +17258,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  purchasePrice: 224
-  courseName: fsdf32
-  graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  purchasePrice: 280
+  courseName: arytmetyka komputerow
+  graphics: {fileID: 21300000, guid: f14923d9434bb0f45a2eaca10dd102db, type: 3}
   department: 5
-  housePrice: 222
-  resitPrices: 220000006f000000de0000004d010000bc0100002b020000
+  housePrice: 150
+  resitPrices: 1800000078000000680100005203000001040000b0040000
 --- !u!1001 &1187877110
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17546,12 +17546,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  purchasePrice: 230
-  courseName: dfe3g3fs
-  graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  purchasePrice: 220
+  courseName: teoria systemow
+  graphics: {fileID: 21300000, guid: d091b70f814660d47b9bf2fa9e37d93f, type: 3}
   department: 4
-  housePrice: 20
-  resitPrices: 160000006f000000de0000004d0100002c0000002b020000
+  housePrice: 150
+  resitPrices: 120000005a00000014000000bc0200006b0300001a040000
 --- !u!1 &1196346138
 GameObject:
   m_ObjectHideFlags: 0
@@ -18586,12 +18586,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  purchasePrice: 11
-  courseName: wegewg32
-  graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  purchasePrice: 180
+  courseName: podstawy programowania
+  graphics: {fileID: 21300000, guid: c724ddb5b6a3815479142f4fdd9829c3, type: 3}
   department: 3
-  housePrice: 244
-  resitPrices: 1e00000082000000e60000004a010000b801000026020000
+  housePrice: 100
+  resitPrices: 0e00000046000000c800000026020000ee020000b6030000
 --- !u!1 &1336023643
 GameObject:
   m_ObjectHideFlags: 0
@@ -18702,12 +18702,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  purchasePrice: 232
-  courseName: sdfgw3g3f
-  graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  purchasePrice: 220
+  courseName: inzynierskie zastosowanie statystyki
+  graphics: {fileID: 21300000, guid: f048534a11ecf7947a8bd3cacb30c5a7, type: 3}
   department: 4
-  housePrice: 20
-  resitPrices: 0b0000006f000000de0000004d010000bc0100002b020000
+  housePrice: 150
+  resitPrices: 120000005a000000fa000000bc0200006b0300001a040000
 --- !u!1001 &1336828653
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20499,12 +20499,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  purchasePrice: 323
-  courseName: sdg32g
-  graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  purchasePrice: 240
+  courseName: zastosowanie informatyki w medycynie
+  graphics: {fileID: 21300000, guid: 53191b28e911ed642bbf9535116e1084, type: 3}
   department: 4
-  housePrice: 30
-  resitPrices: 320000006f000000de0000004d010000bc0100002b020000
+  housePrice: 150
+  resitPrices: 14000000640000002c010000ee0200009d0300006e000000
 --- !u!1 &1498637617
 GameObject:
   m_ObjectHideFlags: 0
@@ -20700,12 +20700,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  purchasePrice: 10
-  courseName: fdfddf
-  graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  purchasePrice: 100
+  courseName: niemiecki
+  graphics: {fileID: 21300000, guid: 1aa0a1d5b50af05478dd1ca0dc0089c2, type: 3}
   department: 1
-  housePrice: 44
-  resitPrices: 1400000078000000dc00000040010000a401000008020000
+  housePrice: 50
+  resitPrices: 060000001e0000005a0000000e0100009001000026020000
 --- !u!1 &1506441565
 GameObject:
   m_ObjectHideFlags: 0
@@ -20816,12 +20816,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  purchasePrice: 10
-  courseName: gfw3tg2
-  graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  purchasePrice: 200
+  courseName: podstawy przetwarzania sygnalow
+  graphics: {fileID: 21300000, guid: 99182b6707ec4ae41a3d203cd175bac6, type: 3}
   department: 3
-  housePrice: 20
-  resitPrices: 0b0000006f000000de0000004d010000bc0100002b020000
+  housePrice: 100
+  resitPrices: 1000000050000000dc0000005802000020030000e8030000
 --- !u!1 &1508959150
 GameObject:
   m_ObjectHideFlags: 0
@@ -20932,12 +20932,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  purchasePrice: 10
-  courseName: eeee
-  graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  purchasePrice: 100
+  courseName: angielski
+  graphics: {fileID: 21300000, guid: ad23ab699564eb84d9a9b21b3e85715e, type: 3}
   department: 1
-  housePrice: 33
-  resitPrices: 3200000096000000fa0000005e010000c201000026020000
+  housePrice: 50
+  resitPrices: 060000001e0000005a0000000e0100009001000026020000
 --- !u!1 &1532492289
 GameObject:
   m_ObjectHideFlags: 0
@@ -24864,12 +24864,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  purchasePrice: 22
-  courseName: zdfg33
-  graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  purchasePrice: 300
+  courseName: scr
+  graphics: {fileID: 21300000, guid: a3d439435c347dc459fb9ac9d3e021d5, type: 3}
   department: 6
-  housePrice: 33
-  resitPrices: 180000006f000000de0000004d010000bc01000037000000
+  housePrice: 200
+  resitPrices: 1a0000008200000086010000840300004c040000fb040000
 --- !u!1 &1737552037
 GameObject:
   m_ObjectHideFlags: 0
@@ -25563,12 +25563,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  purchasePrice: 23
-  courseName: sdffef3
-  graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  purchasePrice: 320
+  courseName: robotyka
+  graphics: {fileID: 21300000, guid: 774ef75ae68e5224b80559007b0fd185, type: 3}
   department: 6
-  housePrice: 31
-  resitPrices: 200000006f000000de0000004d010000bc0100002b020000
+  housePrice: 200
+  resitPrices: 1c00000096000000c2010000e8030000b004000078050000
 --- !u!1 &1786488943
 GameObject:
   m_ObjectHideFlags: 0
@@ -25791,12 +25791,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  purchasePrice: 10
-  courseName: 10
-  graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  purchasePrice: 60
+  courseName: filozofia
+  graphics: {fileID: 21300000, guid: 3fc93486c3a3e494ba5934c62bd08fd8, type: 3}
   department: 0
-  housePrice: 20
-  resitPrices: 64000000c80000002c01000090010000f401000058020000
+  housePrice: 50
+  resitPrices: 04000000140000003c000000b400000040010000c2010000
 --- !u!1 &1796143446
 GameObject:
   m_ObjectHideFlags: 0
@@ -27847,12 +27847,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
-  purchasePrice: 101
-  courseName: dffdddfdffd
-  graphics: {fileID: 21300000, guid: d56f7a3f2fb821143be9b3984eb92f05, type: 3}
+  purchasePrice: 120
+  courseName: hiszpanski
+  graphics: {fileID: 21300000, guid: 200ccdff54a0e1542bc122099a9d0e02, type: 3}
   department: 1
-  housePrice: 44
-  resitPrices: 3200000096000000fa0000005e010000c201000026020000
+  housePrice: 50
+  resitPrices: 0800000028000000640000002c010000c201000058020000
 --- !u!1 &1926858861
 GameObject:
   m_ObjectHideFlags: 0
