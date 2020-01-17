@@ -14,7 +14,7 @@ public class GoToJail : Chance
 {
     public Sprite getSprite()
     {
-        return Resources.Load("Chances/dummyChance2", typeof(Sprite)) as Sprite;
+        return Resources.Load("Chances/szansa-14", typeof(Sprite)) as Sprite;
     }
 
     public IEnumerator executeRule(Player player)
@@ -29,7 +29,7 @@ public class BankFee : Chance
 {
     public Sprite getSprite()
     {
-        return Resources.Load("Chances/dummyChance2", typeof(Sprite)) as Sprite;
+        return Resources.Load("Chances/szansa-01", typeof(Sprite)) as Sprite;
     }
 
     public IEnumerator executeRule(Player player)
@@ -39,19 +39,107 @@ public class BankFee : Chance
     }
 }
 
+public class BankFeeLate : Chance
+{
+    public Sprite getSprite()
+    {
+        return Resources.Load("Chances/szansa-02", typeof(Sprite)) as Sprite;
+    }
+
+    public IEnumerator executeRule(Player player)
+    {
+        player.updateBalanceBy(-100);
+        return null;       
+    }
+}
+
+public class BankBonus : Chance
+{
+    public Sprite getSprite()
+    {
+        return Resources.Load("Chances/szansa-03", typeof(Sprite)) as Sprite;
+    }
+
+    public IEnumerator executeRule(Player player)
+    {
+        player.updateBalanceBy(10);
+        return null;       
+    }
+}
+
+public class BankBonusJuwenalia : Chance
+{
+    public Sprite getSprite()
+    {
+        return Resources.Load("Chances/szansa-05", typeof(Sprite)) as Sprite;
+    }
+
+    public IEnumerator executeRule(Player player)
+    {
+        player.updateBalanceBy(10);
+        return null;       
+    }
+}
+
+public class BankBonusPupil : Chance
+ {
+     public Sprite getSprite()
+     {
+         return Resources.Load("Chances/szansa-07", typeof(Sprite)) as Sprite;
+     }
+ 
+     public IEnumerator executeRule(Player player)
+     {
+         player.updateBalanceBy(100);
+         return null;       
+     }
+ }
+
+public class BankBonusextraCard : Chance
+{
+    public Sprite getSprite()
+    {
+        return Resources.Load("Chances/szansa-09", typeof(Sprite)) as Sprite;
+    }
+
+    public IEnumerator executeRule(Player player)
+    {
+        player.updateBalanceBy(10);
+        return null;       
+    }
+}
+
 public class PlayerFee : Chance
 {
     public Sprite getSprite()
     {
-        return Resources.Load("Chances/dummyChance2", typeof(Sprite)) as Sprite;
+        return Resources.Load("Chances/szansa-04", typeof(Sprite)) as Sprite;
     }
 
     public IEnumerator executeRule(Player player)
     {
         foreach (var otherPlayer in GameController.instance.getPlayers().FindAll(p => p != player))
         {
-            player.updateBalanceBy(-50);
-            otherPlayer.updateBalanceBy(50);
+            player.updateBalanceBy(-10);
+            otherPlayer.updateBalanceBy(10);
+        }
+        return null;       
+    }
+}
+
+public class PlayerFeeBet : Chance
+{
+    public Sprite getSprite()
+    {
+        return Resources.Load("Chances/szansa-17", typeof(Sprite)) as Sprite;
+    }
+
+    public IEnumerator executeRule(Player player)
+    {
+        foreach (var otherPlayer in GameController.instance.getPlayers().FindAll(p => p != player))
+        {
+            player.updateBalanceBy(-10);
+            otherPlayer.updateBalanceBy(10);
         }
         return null;       
     }
@@ -61,7 +149,7 @@ public class OwnedCoursesFee : Chance
 {
     public Sprite getSprite()
     {
-        return Resources.Load("Chances/dummyChance2", typeof(Sprite)) as Sprite;
+        return Resources.Load("Chances/szansa-06", typeof(Sprite)) as Sprite;
     }
 
     public IEnumerator executeRule(Player player)
@@ -78,11 +166,32 @@ public class OwnedCoursesFee : Chance
     }
 }
 
+public class OwnedCoursesBonus : Chance
+{
+    public Sprite getSprite()
+    {
+        return Resources.Load("Chances/szansa-08", typeof(Sprite)) as Sprite;
+    }
+
+    public IEnumerator executeRule(Player player)
+    {
+        int toPay = 0;
+        foreach (var ownedCourse in player.getOwnedCourses())
+        {
+            toPay += ownedCourse.getCurrentLevel() * 20;
+        }
+        string msg = "Gracz " + player.getName() + " otrzymuje " + toPay + " zł łapówki za milczenie.";
+        yield return Alert.instance.displayFormattedAlert(msg, Color.red); 
+        player.updateBalanceBy(toPay);
+        yield return null;       
+    }
+}
+
 public class GoToFreeParking : Chance
 {
     public Sprite getSprite()
     {
-        return Resources.Load("Chances/dummyChance2", typeof(Sprite)) as Sprite;
+        return Resources.Load("Chances/szansa-13", typeof(Sprite)) as Sprite;
     }
 
     public IEnumerator executeRule(Player player)
@@ -96,7 +205,21 @@ public class GoToStart : Chance
 {
     public Sprite getSprite()
     {
-        return Resources.Load("Chances/dummyChance2", typeof(Sprite)) as Sprite;
+        return Resources.Load("Chances/szansa-11", typeof(Sprite)) as Sprite;
+    }
+
+    public IEnumerator executeRule(Player player)
+    {
+        var startField = GameObject.FindObjectOfType<StartField>();
+        yield return player.moveForwardTo(startField);
+    }
+}
+
+public class GoToStartLuck : Chance
+{
+    public Sprite getSprite()
+    {
+        return Resources.Load("Chances/szansa-12", typeof(Sprite)) as Sprite;
     }
 
     public IEnumerator executeRule(Player player)
@@ -109,7 +232,7 @@ public class GoBackToStart : Chance
 {
     public Sprite getSprite()
     {
-        return Resources.Load("Chances/dummyChance2", typeof(Sprite)) as Sprite;
+        return Resources.Load("Chances/szansa-10", typeof(Sprite)) as Sprite;
     }
 
     public IEnumerator executeRule(Player player)
@@ -123,7 +246,21 @@ public class GetOutOfJailCard : Chance
 {
     public Sprite getSprite()
     {
-        return Resources.Load("Chances/dummyChance2", typeof(Sprite)) as Sprite;
+        return Resources.Load("Chances/szansa-15", typeof(Sprite)) as Sprite;
+    }
+
+    public IEnumerator executeRule(Player player)
+    {
+        player.HasPlayerGettingOutOfJailCard = true;
+        return null;
+    }
+}
+
+public class GetOutOfJailCard2 : Chance
+{
+    public Sprite getSprite()
+    {
+        return Resources.Load("Chances/szansa-16", typeof(Sprite)) as Sprite;
     }
 
     public IEnumerator executeRule(Player player)
