@@ -30,11 +30,7 @@ public class Player : MonoBehaviour
     public void updateBalanceBy(int amountOfmoney)
     {
         balance += amountOfmoney;
-        
-        if (GameController.instance.getCurrentPlayer() == this)
-        {
-            PlayerInfo.instance.updateBalance(balance);
-        }
+        PlayerInfo.instance.updateBalance(balance);
     }
     
     public IEnumerator rotate(float degrees)

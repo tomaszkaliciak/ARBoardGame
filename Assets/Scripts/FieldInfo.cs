@@ -80,8 +80,8 @@ public class FieldInfo : MonoBehaviour
             return;
         }
         
-        upgradeFieldButton.GetComponent<LeanButton>().OnClick.RemoveAllListeners(); 
-        upgradeFieldButton.GetComponent<LeanButton>().OnClick.AddListener(
+        upgradeFieldButton.GetComponent<Button>().onClick.RemoveAllListeners(); 
+        upgradeFieldButton.GetComponent<Button>().onClick.AddListener(
             new UnityAction(() => onUpgradeButtonClick(field)));
         upgradeFieldButton.SetActive(true);
     }
@@ -96,8 +96,8 @@ public class FieldInfo : MonoBehaviour
             return;
         }
 
-        downgradeFieldButton.GetComponent<LeanButton>().OnClick.RemoveAllListeners(); 
-        downgradeFieldButton.GetComponent<LeanButton>().OnClick.AddListener(
+        downgradeFieldButton.GetComponent<Button>().onClick.RemoveAllListeners(); 
+        downgradeFieldButton.GetComponent<Button>().onClick.AddListener(
             new UnityAction(() => onDowngradeButtonClick(field)));
         downgradeFieldButton.SetActive(true);
     }

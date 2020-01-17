@@ -10,13 +10,20 @@ public class PlayerInfo : MonoBehaviour
     void Awake()
     {
         instance = this;
-        balance = transform.Find("Balance").GetComponent<Text>();
-        playerName = transform.Find("Name").GetComponent<Text>();
+        balance = GameObject.Find("PlayerInfo").transform.Find("Balance").GetComponent<Text>();
+        playerName = GameObject.Find("PlayerInfo").transform.Find("Name").GetComponent<Text>();
     }
 
-    public void updateBalance(int balance)
+    public void updateBalance(int newbalance)
     {
-        this.balance.text = balance.ToString();
+        Awake();
+        try
+        {
+            this.balance.text = newbalance.ToString();
+        }
+        catch
+        {
+        }
     }
 
     public void setPlayer(Player currentPlayer)
