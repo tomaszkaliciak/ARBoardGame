@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Lean.Gui;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -38,10 +39,6 @@ public class FieldInfo : MonoBehaviour
                 text.SetActive(true);
                 updateButtons(couseField);
             }
-        }
-        else
-        {
-            fieldDetail.GetComponentInChildren<Text>().text = "";
         }
         displayMortageButton(field);
         panel.SetActive(true);
@@ -118,8 +115,8 @@ public class FieldInfo : MonoBehaviour
         var textOnMortageButton = mortgageButton.GetComponentInChildren<Text>();
 
         textOnMortageButton.text = field.isPledged() ? "Wykup pole" : "Zastaw pole";
-        mortgageButton.GetComponent<Button>().onClick.RemoveAllListeners(); 
-        mortgageButton.GetComponent<Button>().onClick.AddListener(
+        mortgageButton.GetComponent<LeanButton>().OnClick.RemoveAllListeners();
+        mortgageButton.GetComponent<LeanButton>().OnClick.AddListener(
             new UnityAction(() => onMortgageButtonClick(field)));
         mortgageButton.SetActive(true);
     }
