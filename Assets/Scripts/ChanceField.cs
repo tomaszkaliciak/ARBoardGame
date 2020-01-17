@@ -17,13 +17,15 @@ public static class IListExtensions {
 }
 public class ChanceField : BoardField
 {
-    private List<Chance> stackOfCards;
+    static private List<Chance> stackOfCards = new List<Chance>();
 
     protected override void Awake()
     {
         base.Awake();
-        stackOfCards = new List<Chance>();
-        fillStack();
+        if (stackOfCards.Count == 0)
+        {
+            fillStack();
+        }
     }
     public override IEnumerator visit(Player player)
     {
@@ -50,6 +52,14 @@ public class ChanceField : BoardField
         stackOfCards.Add(new GoToStart());
         stackOfCards.Add(new GoBackToStart());
         stackOfCards.Add(new GetOutOfJailCard());
+        stackOfCards.Add(new BankFeeLate());
+        stackOfCards.Add(new BankBonus());
+        stackOfCards.Add(new BankBonusJuwenalia());
+        stackOfCards.Add(new BankBonusPupil());
+        stackOfCards.Add(new BankBonusextraCard());
+        stackOfCards.Add(new PlayerFeeBet());
+        stackOfCards.Add(new OwnedCoursesBonus());
+        stackOfCards.Add(new GoToStartLuck());
         stackOfCards.Shuffle();
     }
 }
