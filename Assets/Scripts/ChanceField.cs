@@ -17,13 +17,15 @@ public static class IListExtensions {
 }
 public class ChanceField : BoardField
 {
-    private List<Chance> stackOfCards;
+    static private List<Chance> stackOfCards = new List<Chance>();
 
     protected override void Awake()
     {
         base.Awake();
-        stackOfCards = new List<Chance>();
-        fillStack();
+        if (stackOfCards.Count == 0)
+        {
+            fillStack();
+        }
     }
     public override IEnumerator visit(Player player)
     {

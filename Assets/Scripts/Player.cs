@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 
 [System.Serializable] 
@@ -29,8 +30,13 @@ public class Player : MonoBehaviour
     public void updateBalanceBy(int amountOfmoney)
     {
         balance += amountOfmoney;
-        PlayerInfo.instance.updateBalance(balance);
+        
+        if (GameController.instance.getCurrentPlayer() == this)
+        {
+            PlayerInfo.instance.updateBalance(balance);
+        }
     }
+    
     public IEnumerator rotate(float degrees)
     {
         float progress = 0;

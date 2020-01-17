@@ -24,12 +24,9 @@ public class FieldInfo : MonoBehaviour
         text = transform.GetChild(4).gameObject;
     }
 
-    [SerializeField] private Sprite graphics;
-    
     public void display(Buyable field)
     {
-        graphics = field.graphics;
-        var loc = field.transform.position;
+        fieldDetail.GetComponent<Image>().sprite = field.graphics;
         
         if (field.GetType() == typeof(Course))
         {
