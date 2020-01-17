@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.4372762, g: 0.4850397, b: 0.5653095, a: 1}
+  m_IndirectSpecularColor: {r: 0.43727636, g: 0.4850403, b: 0.56531066, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1413,7 +1413,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
   purchasePrice: 350
-  courseName: metody glebokiego uczenia
+  courseName: Metody glebokiego uczenia
   graphics: {fileID: 21300000, guid: e14d0128031068c47ad5617979124084, type: 3}
   department: 7
   housePrice: 200
@@ -2629,7 +2629,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
   purchasePrice: 200
-  courseName: transport szynowy
+  courseName: Transport szynowy
   graphics: {fileID: 21300000, guid: 1b7df0756fa83dc4b8e3f3a50157443f, type: 3}
 --- !u!1001 &153972234
 PrefabInstance:
@@ -2896,7 +2896,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
   purchasePrice: 260
-  courseName: architektura komputerow2
+  courseName: "Architektura komputer\xF3w 2"
   graphics: {fileID: 21300000, guid: 3b206efd5f81a9648a3eb935d52f90e1, type: 3}
   department: 5
   housePrice: 150
@@ -3290,6 +3290,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 201608928}
   m_CullTransparentMesh: 0
+--- !u!21 &202827427
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 'generated_1Material
+
+    28890'
+  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 5e3ee05dc5fc4d17a1fdfdced31c9a20, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
 --- !u!1 &203398432
 GameObject:
   m_ObjectHideFlags: 0
@@ -4310,7 +4338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
   purchasePrice: 140
-  courseName: algebra
+  courseName: Algebra
   graphics: {fileID: 21300000, guid: 33948b9384df28e438080732e215d4e0, type: 3}
   department: 2
   housePrice: 100
@@ -4533,7 +4561,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
   purchasePrice: 60
-  courseName: etyka inzynierska
+  courseName: "Etyka in\u017Cynierska"
   graphics: {fileID: 21300000, guid: 9460cdfafb7731445bb13801876c16cc, type: 3}
   department: 0
   housePrice: 50
@@ -4834,7 +4862,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
   purchasePrice: 100
-  courseName: straz politechniki
+  courseName: Straz politechniki
   graphics: {fileID: 21300000, guid: 0cc68ce3783ff074ab852134cca85777, type: 3}
 --- !u!1 &275362682
 GameObject:
@@ -5040,7 +5068,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
   purchasePrice: 300
-  courseName: cyfrowe przetwarzanie obrazow
+  courseName: Cyfrowe przetwarzanie obrazow
   graphics: {fileID: 21300000, guid: 6fb1ac8bf9b8aac4f91d448d3686302b, type: 3}
   department: 6
   housePrice: 200
@@ -5490,7 +5518,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
   purchasePrice: 140
-  courseName: analiza1
+  courseName: Analiza Matematyczna 1
   graphics: {fileID: 21300000, guid: 963d4cbd3d2bdb64893f15dd35af16c7, type: 3}
   department: 2
   housePrice: 100
@@ -6087,169 +6115,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 334827721}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!43 &339086309
-Mesh:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: ImageTargetMesh17026
-  serializedVersion: 10
-  m_SubMeshes:
-  - serializedVersion: 2
-    firstByte: 0
-    indexCount: 6
-    topology: 0
-    baseVertex: 0
-    firstVertex: 0
-    vertexCount: 4
-    localAABB:
-      m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.5, y: 0, z: 0.375}
-  m_Shapes:
-    vertices: []
-    shapes: []
-    channels: []
-    fullWeights: []
-  m_BindPose: []
-  m_BoneNameHashes: 
-  m_RootBoneNameHash: 0
-  m_BonesAABB: []
-  m_VariableBoneCountWeights:
-    m_Data: 
-  m_MeshCompression: 0
-  m_IsReadable: 1
-  m_KeepVertices: 1
-  m_KeepIndices: 1
-  m_IndexFormat: 0
-  m_IndexBuffer: 000001000200020001000300
-  m_VertexData:
-    serializedVersion: 3
-    m_VertexCount: 4
-    m_Channels:
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 12
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 24
-      format: 0
-      dimension: 2
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    m_DataSize: 128
-    _typelessdata: 000000bf000000000000c0be000000000000803f000000000000000000000000000000bf000000000000c03e000000000000803f00000000000000000000803f0000003f000000000000c0be000000000000803f000000000000803f000000000000003f000000000000c03e000000000000803f000000000000803f0000803f
-  m_CompressedMesh:
-    m_Vertices:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UV:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Normals:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Tangents:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Weights:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_NormalSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_TangentSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_FloatColors:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_BoneIndices:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Triangles:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UVInfo: 0
-  m_LocalAABB:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0.5, y: 0, z: 0.375}
-  m_MeshUsageFlags: 0
-  m_BakedConvexCollisionMesh: 
-  m_BakedTriangleCollisionMesh: 
-  m_MeshMetrics[0]: 1
-  m_MeshMetrics[1]: 1
-  m_MeshOptimizationFlags: 1
-  m_StreamData:
-    offset: 0
-    size: 0
-    path: 
 --- !u!1 &343391411
 GameObject:
   m_ObjectHideFlags: 0
@@ -8458,7 +8323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
   purchasePrice: 260
-  courseName: architektura komputerow1
+  courseName: "Architektura komputer\xF3w1"
   graphics: {fileID: 21300000, guid: c8537450aae995e4ea0aaac91f9b15bc, type: 3}
   department: 5
   housePrice: 150
@@ -8652,7 +8517,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
   purchasePrice: 200
-  courseName: polinka
+  courseName: Polinka
   graphics: {fileID: 21300000, guid: 2e9473f6da737f74ca502345164c4679, type: 3}
 --- !u!1 &522508192
 GameObject:
@@ -12447,7 +12312,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
   purchasePrice: 160
-  courseName: analiza2
+  courseName: Analiza Matematyczna 2
   graphics: {fileID: 21300000, guid: cdf4c034dc358364cacfb10046006c27, type: 3}
   department: 2
   housePrice: 100
@@ -15493,7 +15358,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
   purchasePrice: 180
-  courseName: programowanie obiektowe
+  courseName: Programowanie obiektowe
   graphics: {fileID: 21300000, guid: 96caf827e10223c4ea52ae4bd7395bd4, type: 3}
   department: 3
   housePrice: 100
@@ -15774,34 +15639,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1089709196}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &1093791830
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'generated_1Material
-
-    17036'
-  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 5e3ee05dc5fc4d17a1fdfdced31c9a20, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors:
-    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
 --- !u!1 &1094642286
 GameObject:
   m_ObjectHideFlags: 0
@@ -15872,6 +15709,169 @@ Transform:
   m_Father: {fileID: 427425863}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!43 &1118934066
+Mesh:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ImageTargetMesh28880
+  serializedVersion: 10
+  m_SubMeshes:
+  - serializedVersion: 2
+    firstByte: 0
+    indexCount: 6
+    topology: 0
+    baseVertex: 0
+    firstVertex: 0
+    vertexCount: 4
+    localAABB:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0.5, y: 0, z: 0.375}
+  m_Shapes:
+    vertices: []
+    shapes: []
+    channels: []
+    fullWeights: []
+  m_BindPose: []
+  m_BoneNameHashes: 
+  m_RootBoneNameHash: 0
+  m_BonesAABB: []
+  m_VariableBoneCountWeights:
+    m_Data: 
+  m_MeshCompression: 0
+  m_IsReadable: 1
+  m_KeepVertices: 1
+  m_KeepIndices: 1
+  m_IndexFormat: 0
+  m_IndexBuffer: 000001000200020001000300
+  m_VertexData:
+    serializedVersion: 3
+    m_VertexCount: 4
+    m_Channels:
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 12
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 24
+      format: 0
+      dimension: 2
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    m_DataSize: 128
+    _typelessdata: 000000bf000000000000c0be000000000000803f000000000000000000000000000000bf000000000000c03e000000000000803f00000000000000000000803f0000003f000000000000c0be000000000000803f000000000000803f000000000000003f000000000000c03e000000000000803f000000000000803f0000803f
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UV:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Normals:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_FloatColors:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UVInfo: 0
+  m_LocalAABB:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0.5, y: 0, z: 0.375}
+  m_MeshUsageFlags: 0
+  m_BakedConvexCollisionMesh: 
+  m_BakedTriangleCollisionMesh: 
+  m_MeshMetrics[0]: 1
+  m_MeshMetrics[1]: 1
+  m_MeshOptimizationFlags: 1
+  m_StreamData:
+    offset: 0
+    size: 0
+    path: 
 --- !u!1 &1119799584
 GameObject:
   m_ObjectHideFlags: 0
@@ -17259,7 +17259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
   purchasePrice: 280
-  courseName: arytmetyka komputerow
+  courseName: Arytmetyka komputerow
   graphics: {fileID: 21300000, guid: f14923d9434bb0f45a2eaca10dd102db, type: 3}
   department: 5
   housePrice: 150
@@ -17547,7 +17547,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
   purchasePrice: 220
-  courseName: teoria systemow
+  courseName: Teoria systemow
   graphics: {fileID: 21300000, guid: d091b70f814660d47b9bf2fa9e37d93f, type: 3}
   department: 4
   housePrice: 150
@@ -18587,7 +18587,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
   purchasePrice: 180
-  courseName: podstawy programowania
+  courseName: Podstawy programowania
   graphics: {fileID: 21300000, guid: c724ddb5b6a3815479142f4fdd9829c3, type: 3}
   department: 3
   housePrice: 100
@@ -18703,7 +18703,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
   purchasePrice: 220
-  courseName: inzynierskie zastosowanie statystyki
+  courseName: Inzynierskie zastosowanie statystyki
   graphics: {fileID: 21300000, guid: f048534a11ecf7947a8bd3cacb30c5a7, type: 3}
   department: 4
   housePrice: 150
@@ -20500,7 +20500,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
   purchasePrice: 240
-  courseName: zastosowanie informatyki w medycynie
+  courseName: Zastosowanie informatyki w medycynie
   graphics: {fileID: 21300000, guid: 53191b28e911ed642bbf9535116e1084, type: 3}
   department: 4
   housePrice: 150
@@ -20701,7 +20701,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
   purchasePrice: 100
-  courseName: niemiecki
+  courseName: Niemiecki
   graphics: {fileID: 21300000, guid: 1aa0a1d5b50af05478dd1ca0dc0089c2, type: 3}
   department: 1
   housePrice: 50
@@ -20817,7 +20817,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
   purchasePrice: 200
-  courseName: podstawy przetwarzania sygnalow
+  courseName: Podstawy przetwarzania sygnalow
   graphics: {fileID: 21300000, guid: 99182b6707ec4ae41a3d203cd175bac6, type: 3}
   department: 3
   housePrice: 100
@@ -20933,7 +20933,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
   purchasePrice: 100
-  courseName: angielski
+  courseName: Angielski
   graphics: {fileID: 21300000, guid: ad23ab699564eb84d9a9b21b3e85715e, type: 3}
   department: 1
   housePrice: 50
@@ -24566,7 +24566,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
   purchasePrice: 200
-  courseName: parkinki na kampusie
+  courseName: Parkingi na kampusie
   graphics: {fileID: 21300000, guid: 5c7b1955d0f533c4a904427bca2818a1, type: 3}
 --- !u!1 &1722285863
 GameObject:
@@ -24865,7 +24865,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
   purchasePrice: 300
-  courseName: scr
+  courseName: Systemy czasu rzeczywistego
   graphics: {fileID: 21300000, guid: a3d439435c347dc459fb9ac9d3e021d5, type: 3}
   department: 6
   housePrice: 200
@@ -25564,7 +25564,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
   purchasePrice: 320
-  courseName: robotyka
+  courseName: Robotyka
   graphics: {fileID: 21300000, guid: 774ef75ae68e5224b80559007b0fd185, type: 3}
   department: 6
   housePrice: 200
@@ -25792,7 +25792,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
   purchasePrice: 60
-  courseName: filozofia
+  courseName: Filozofia
   graphics: {fileID: 21300000, guid: 3fc93486c3a3e494ba5934c62bd08fd8, type: 3}
   department: 0
   housePrice: 50
@@ -26295,7 +26295,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1846563237}
-  m_Mesh: {fileID: 339086309}
+  m_Mesh: {fileID: 1118934066}
 --- !u!23 &1846563239
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26313,7 +26313,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1093791830}
+  - {fileID: 202827427}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27848,7 +27848,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextField: {fileID: 0}
   purchasePrice: 120
-  courseName: hiszpanski
+  courseName: Hiszpanski
   graphics: {fileID: 21300000, guid: 200ccdff54a0e1542bc122099a9d0e02, type: 3}
   department: 1
   housePrice: 50
