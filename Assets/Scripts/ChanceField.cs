@@ -52,6 +52,14 @@ public class ChanceField : BoardField
         stackOfCards.Add(new GoToStart());
         stackOfCards.Add(new GoBackToStart());
         stackOfCards.Add(new GetOutOfJailCard());
+        stackOfCards.Add(new BankFeeLate());
+        stackOfCards.Add(new BankBonus());
+        stackOfCards.Add(new BankBonusJuwenalia());
+        stackOfCards.Add(new BankBonusPupil());
+        stackOfCards.Add(new BankBonusextraCard());
+        stackOfCards.Add(new PlayerFeeBet());
+        stackOfCards.Add(new OwnedCoursesBonus());
+        stackOfCards.Add(new GoToStartLuck());
         stackOfCards.Shuffle();
     }
 }
